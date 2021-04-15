@@ -6,4 +6,9 @@ public class BaseTest {
     @LocalServerPort
     private int serverPort;
 
+    protected String getBaseUri(){
+        return String.format("http://localhost:%d/jeep_db", serverPort);
+    }
+
+
 }
