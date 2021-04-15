@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 public class OrderRequest {
   private String customer;
-  private JeepModel model;
+//  private JeepModel model;
   private String trim;
   private int doors;
   private String color;
