@@ -2,6 +2,7 @@ package com.jed.jeep.controller;
 
 import com.jed.jeep.controller.support.BaseTest;
 import com.jed.jeep.controller.support.FetchJeepTestSupport;
+import com.jed.jeep.entities.Jeep;
 import com.jed.jeep.entities.JeepModel;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
