@@ -1,4 +1,4 @@
-package com.jed.jeep.entities;
+package com.jed.jeep.entity;
 
 public enum FuelType {
   GASOLINE, DIESEL, HYBRID

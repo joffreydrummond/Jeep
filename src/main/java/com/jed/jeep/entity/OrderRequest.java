@@ -1,4 +1,4 @@
-package com.jed.jeep.entities;
+package com.jed.jeep.entity;
 
 import java.util.List;
 import lombok.Data;

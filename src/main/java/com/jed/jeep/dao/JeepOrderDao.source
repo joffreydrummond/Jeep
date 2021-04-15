@@ -1,14 +1,14 @@
-package com.promineotech.jeep.dao;
+package com.jed.jeep.dao;
 
 import java.util.List;
 import java.util.Optional;
-import com.promineotech.jeep.entity.Color;
-import com.promineotech.jeep.entity.Customer;
-import com.promineotech.jeep.entity.Engine;
-import com.promineotech.jeep.entity.Jeep;
-import com.promineotech.jeep.entity.JeepModel;
-import com.promineotech.jeep.entity.Option;
-import com.promineotech.jeep.entity.Tire;
+import com.jed.jeep.entity.Color;
+import com.jed.jeep.entity.Customer;
+import com.jed.jeep.entity.Engine;
+import com.jed.jeep.entity.Jeep;
+import com.jed.jeep.entity.JeepModel;
+import com.jed.jeep.entity.Option;
+import com.jed.jeep.entity.Tire;
 
 public interface JeepOrderDao {
   List<Option> fetchOptions(List<String> optionIds);

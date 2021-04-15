@@ -1,0 +1,10 @@
+package com.jed.jeep.entity;
+
+public enum JeepModel {
+
+    MODEL_PK, MODEL_ID, TRIM_LEVEL, NUM_DOORS, WHEEL_SIZE, BASE_PRICE;
+
+
+
+//    WRANGLER, GRAND_CHEROKEE, CHEROKEE, COMPASS, RENEGADE, GLADIATOR, WRANGLER_4XE;
+}
