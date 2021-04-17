@@ -6,14 +6,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController @Slf4j
-public class DefaultJavaSalesController implements JeepSalesController{
+@RestController
+@Slf4j
+public class DefaultJavaSalesController implements JeepSalesController {
 
+  @Override
+  public List<Jeep> fetchJeeps(String model, String trim) {
 
-    @Override
-    public List<Jeep> fetchJeeps(String model, String trim) {
-
-
-        return null;
-    }
+    log.info("model={}, trim={}", model, trim);
+    return null;
+  }
 }
