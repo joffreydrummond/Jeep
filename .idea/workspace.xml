@@ -7,12 +7,6 @@
     <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="fixed errors with instance variables from jeep class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/JeepModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/JeepModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/FetchJeepTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/FetchJeepTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/controller/JeepSalesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jed/jeep/controller/JeepSalesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/Jeep$JeepBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/Jeep$JeepBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/Jeep.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/Jeep.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/JeepModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/JeepModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/FetchJeepTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/FetchJeepTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,11 +38,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Week4/Code" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -279,6 +273,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created JeepSales class with psvm" />

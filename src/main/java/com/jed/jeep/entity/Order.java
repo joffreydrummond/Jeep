@@ -11,7 +11,7 @@ import lombok.Data;
 public class Order {
   private Long orderPK;
   private Customer customer;
-//  private Jeep model;
+  private Jeep model;
   private Color color;
   private Engine engine;
   private Tire tire;
