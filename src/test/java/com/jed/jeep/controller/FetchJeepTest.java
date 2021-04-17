@@ -22,7 +22,7 @@ public class FetchJeepTest extends FetchJeepTestSupport {
     String trim = "Sport";
     String uri = String.format("%s?model=%s&trim=%s", getBaseUri(), model, trim);
 
-        System.out.println(uri);
+//        System.out.println(uri);
 
     // When a connection is made to the URI
         ResponseEntity<Jeep> res = getRestTemplate().getForEntity(uri, Jeep.class);

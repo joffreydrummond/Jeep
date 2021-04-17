@@ -20,7 +20,7 @@ import java.util.List;
 
 @RequestMapping("/jeeps")
 @OpenAPIDefinition(
-    info = @Info(title = "Jeep Sales Service"),
+    info = @Info(title = "Joffrey Jeep Sales Service"),
     servers = {@Server(url = "http://localhost:8080", description = "Local Server")})
 public interface JeepSalesController {
 
@@ -62,5 +62,6 @@ public interface JeepSalesController {
       })
   @GetMapping
   @ResponseStatus(code = HttpStatus.OK)
-  List<Jeep> fetchJeeps(@RequestParam(required = false)String model, @RequestParam(required = false)String trim);
+  List<Jeep> fetchJeeps(
+      @RequestParam(required = false) String model, @RequestParam(required = false) String trim);
 }
