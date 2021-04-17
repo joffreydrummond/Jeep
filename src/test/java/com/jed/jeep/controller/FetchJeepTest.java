@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class FetchJeepTest extends FetchJeepTestSupport {
@@ -17,9 +18,8 @@ public class FetchJeepTest extends FetchJeepTestSupport {
 
     // Given a valid model, trim, and URI
 
-    JeepModel model = JeepModel.MODEL_ID;
-
-    JeepModel trim = JeepModel.TRIM_LEVEL;
+    JeepModel model = JeepModel.WRANGLER;
+    String trim = "Sport";
     String uri = String.format("%s?model=%s&trim=%s", getBaseUri(), model, trim);
 
         System.out.println(uri);
@@ -33,8 +33,10 @@ public class FetchJeepTest extends FetchJeepTestSupport {
 
     // Then a valid response code is returned 200 - OK
 
-    assert (res.getStatusCode().equals(HttpStatus.OK));
+//    assert (res.getStatusCode().equals(HttpStatus.OK));
+      assertThat(res.getStatusCode()).isEqualTo(HttpStatus.OK);
 
-    System.out.println(getBaseUri());
+
+      System.out.println(getBaseUri());
   }
 }
