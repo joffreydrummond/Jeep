@@ -62,5 +62,5 @@ public interface JeepSalesController {
       })
   @GetMapping
   @ResponseStatus(code = HttpStatus.OK)
-  List<Jeep> fetchJeeps(@RequestParam(required = false)JeepModel model, @RequestParam(required = false)String trim);
+  List<Jeep> fetchJeeps(@RequestParam(required = false)String model, @RequestParam(required = false)String trim);
 }
