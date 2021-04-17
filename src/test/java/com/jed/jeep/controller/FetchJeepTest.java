@@ -16,27 +16,25 @@ public class FetchJeepTest extends FetchJeepTestSupport {
   @Test
   void testThatJeepsAreReturnedWhenAValidModelAndTrimAreSupplied() {
 
-    // Given a valid model, trim, and URI
+    // Given
 
     JeepModel model = JeepModel.WRANGLER;
     String trim = "Sport";
-    String uri = String.format("%s?model=%s&trim=%s", getBaseUri(), model, trim);
+    String uri =
+            String.format("%s?model=%s&trim=%s", getBaseUri(), model, trim);
 
-//        System.out.println(uri);
+    // When
+//        ResponseEntity<Jeep> res = getRestTemplate().getForEntity(uri, Jeep.class);
 
-    // When a connection is made to the URI
-        ResponseEntity<Jeep> res = getRestTemplate().getForEntity(uri, Jeep.class);
+    ResponseEntity<Jeep> res =
+        getRestTemplate()
+            .getForEntity(uri, Jeep.class, model, trim, new ParameterizedTypeReference<>() {});
 
-//    ResponseEntity<Jeep> res =
-//        getRestTemplate()
-//            .getForEntity(uri, Jeep.class, model, trim, new ParameterizedTypeReference<>() {});
+    // Then
 
-    // Then a valid response code is returned 200 - OK
-
-//    assert (res.getStatusCode().equals(HttpStatus.OK));
       assertThat(res.getStatusCode()).isEqualTo(HttpStatus.OK);
 
+//    assertThat(res.getStatusCode().is2xxSuccessful());
 
-      System.out.println(getBaseUri());
   }
 }
