@@ -6,6 +6,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 
 public class BaseTest {
+
     @LocalServerPort
     private int serverPort;
 
@@ -13,9 +14,8 @@ public class BaseTest {
     @Getter
     private TestRestTemplate restTemplate;
 
-    protected String getBaseUri(){
-        return String.format("http://localhost:%d/jeep_db", serverPort);
+    protected String getBaseUri() {
+        return String.format("http://localhost:%d/jeeps", serverPort);
     }
-
 
 }

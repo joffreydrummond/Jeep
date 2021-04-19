@@ -3,7 +3,6 @@ package com.jed.jeep.controller;
 import com.jed.jeep.entity.Jeep;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.util.List;
 
 
@@ -15,3 +14,5 @@ public class DefaultJeepSalesController implements JeepSalesController {
     return null;
   }
 }
+
+

@@ -12,7 +12,7 @@
     <artifactId>jeep-sales</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>j-p</name>
-    <description>Jeep Sales Project</description>
+    <description>Joffrey Jeep Sales Project</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -21,7 +21,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>

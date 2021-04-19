@@ -8,11 +8,11 @@ import java.math.BigDecimal;
 @Data
 @Builder
 public class Jeep {
-    long modelPK;
-    JeepModel modelId;
-    String trimLevel;
-    int numDoors;
-    int wheelSize;
-    BigDecimal basePrice;
+    private int modelPK;
+    private JeepModel modelId;
+    private String trimLevel;
+    private int numDoors;
+    private int wheelSize;
+    private BigDecimal basePrice;
 
 }

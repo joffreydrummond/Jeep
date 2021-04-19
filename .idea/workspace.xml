@@ -4,16 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="tested jeepsales fetchjeep method model &amp; trim. working">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="fixed basetest, fetchjeeptest pass">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/JeepSales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/JeepSales.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/DefaultJavaSalesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/DefaultJeepSalesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/DefaultJeepSalesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/DefaultJeepSalesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/JeepSalesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/JeepSalesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/dao/DefaultJeepOrderService.source" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/dao/DefaultJeepOrderService.source" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/dao/DefaultJeepOrderDao.source" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/dao/DefaultJeepOrderDao.source" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/Jeep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/Jeep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/JeepModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/JeepModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/FetchJeepTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/FetchJeepTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/support/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/support/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/JeepSales.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jed/jeep/JeepSales.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/controller/JeepSalesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jed/jeep/controller/JeepSalesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/Jeep$JeepBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/Jeep$JeepBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/Jeep.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/Jeep.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/JeepModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/JeepModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/FetchJeepTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/FetchJeepTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/support/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/support/BaseTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +58,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -128,8 +137,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.FetchJeepTest" />
-        <item itemvalue="Application.JeepSales" />
         <item itemvalue="JUnit.FetchJeepTest.testThatJeepsAreReturnedWhenAValidModelAndTrimAreSupplied" />
+        <item itemvalue="Application.JeepSales" />
         <item itemvalue="JUnit.FetchJeepTest.name" />
       </list>
     </recent_temporary>
@@ -332,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618686271838</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="add scanbasepackages to JeepSales class">
+      <created>1618691286391</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1618691286391</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -348,7 +364,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created JeepSales class with psvm" />
     <MESSAGE value="added autoconfigure springbootapp that fixed teh connection issue" />
     <MESSAGE value="added dao files from source code" />
     <MESSAGE value="created FetchJeepTest class" />
@@ -372,6 +387,12 @@
     <MESSAGE value="added slf4j annotation" />
     <MESSAGE value="added log.info in defaultjeepsalescontroller" />
     <MESSAGE value="tested jeepsales fetchjeep method model &amp; trim. working" />
-    <option name="LAST_COMMIT_MESSAGE" value="tested jeepsales fetchjeep method model &amp; trim. working" />
+    <MESSAGE value="add scanbasepackages to JeepSales class" />
+    <MESSAGE value="fixed basetest, fetchjeeptest pass" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed basetest, fetchjeeptest pass" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
