@@ -1,14 +1,15 @@
 package com.jed.jeep.entity;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 import java.math.BigDecimal;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Jeep {
-    private int modelPK;
+    private Long modelPK;
     private JeepModel modelId;
     private String trimLevel;
     private int numDoors;

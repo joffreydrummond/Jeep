@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="added application-test.yaml file to test resources">
+    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="create buildexpected method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/Jeep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/Jeep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/FetchJeepTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/FetchJeepTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/FetchJeepTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/FetchJeepTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/support/FetchJeepTestSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/support/FetchJeepTestSupport.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -357,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618801905574</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="create buildexpected method">
+      <created>1618804518941</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1618804518941</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -373,7 +381,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created FetchJeepTest class" />
     <MESSAGE value="added webenvironment random port to Fetchjeep test class" />
     <MESSAGE value="added local server port to the basetest class" />
     <MESSAGE value="created getbaseuri method" />
@@ -398,7 +405,8 @@
     <MESSAGE value="fixed basetest, fetchjeeptest pass" />
     <MESSAGE value="added application.yaml file" />
     <MESSAGE value="added application-test.yaml file to test resources" />
-    <option name="LAST_COMMIT_MESSAGE" value="added application-test.yaml file to test resources" />
+    <MESSAGE value="create buildexpected method" />
+    <option name="LAST_COMMIT_MESSAGE" value="create buildexpected method" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

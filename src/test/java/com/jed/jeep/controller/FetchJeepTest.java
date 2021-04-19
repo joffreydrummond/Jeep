@@ -29,14 +29,15 @@ class FetchJeepTest extends FetchJeepTestSupport {
     String uri = String.format("%s?model=%s&trim=%s", getBaseUri(), model, trim);
 
     // when: a connection is made to uri
-        ResponseEntity<List<Jeep>> res = getRestTemplate().exchange(uri, HttpMethod.GET, null, new ParameterizedTypeReference<>() {});
+    ResponseEntity<List<Jeep>> res =
+        getRestTemplate()
+            .exchange(uri, HttpMethod.GET, null, new ParameterizedTypeReference<>() {});
 
     // then: a valid status code is returned OK 200
-       assertThat(res.getStatusCode()).isEqualTo(HttpStatus.OK);
+    assertThat(res.getStatusCode()).isEqualTo(HttpStatus.OK);
 
-       //and: the actual list is the same as the expected list
-      List<Jeep> expected = buildExpected();
-
-      }
+    // and: the actual list is the same as the expected list
+    List<Jeep> expected = buildExpected();
+    assertThat(res.getBody()).isEqualTo(expected);
   }
 }
