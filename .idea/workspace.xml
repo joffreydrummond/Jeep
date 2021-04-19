@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="created jeelsaleservice interface" />
+    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="added service annotation to DefaultJeepSalesService">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +18,8 @@
       <list>
         <option value="AnnotationType" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -58,7 +61,7 @@
       <recent name="C:\Users\Joffrey New\Desktop\Promineo Tech - 2021\Week13\Code" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FetchJeepTest">
+  <component name="RunManager" selected="Application.JeepSales">
     <configuration name="JeepSales" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jed.jeep.JeepSales" />
       <module name="Jeep" />
@@ -121,9 +124,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JeepSales" />
         <item itemvalue="JUnit.FetchJeepTest" />
         <item itemvalue="JUnit.FetchJeepTest.testThatJeepsAreReturnedWhenAValidModelAndTrimAreSupplied" />
-        <item itemvalue="Application.JeepSales" />
         <item itemvalue="JUnit.FetchJeepTest.name" />
       </list>
     </recent_temporary>
@@ -403,7 +406,28 @@
       <option name="project" value="LOCAL" />
       <updated>1618808649307</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="created defaultjeepsaleservice class">
+      <created>1618808852907</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1618808852908</updated>
+    </task>
+    <task id="LOCAL-00040" summary="created defaultjeepsaleservice class">
+      <created>1618808861787</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1618808861787</updated>
+    </task>
+    <task id="LOCAL-00041" summary="added service annotation to DefaultJeepSalesService">
+      <created>1618808990296</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1618808990296</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -419,8 +443,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added getrestemplate method. failed test" />
-    <MESSAGE value="added jeep.class to entity. passed" />
     <MESSAGE value="added response entity type jeep. passed" />
     <MESSAGE value="added instance variables to Jeep class. changed fethcjeep to match instance variables. failed" />
     <MESSAGE value="added openapi definition. failed" />
@@ -444,7 +466,9 @@
     <MESSAGE value="ran fetchjeeptest. created two jeep wranglers in list failed" />
     <MESSAGE value="sout expected" />
     <MESSAGE value="created jeelsaleservice interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="created jeelsaleservice interface" />
+    <MESSAGE value="created defaultjeepsaleservice class" />
+    <MESSAGE value="added service annotation to DefaultJeepSalesService" />
+    <option name="LAST_COMMIT_MESSAGE" value="added service annotation to DefaultJeepSalesService" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
