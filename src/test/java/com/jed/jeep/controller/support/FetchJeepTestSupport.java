@@ -1,4 +1,12 @@
 package com.jed.jeep.controller.support;
 
-public class FetchJeepTestSupport extends BaseTest{
+import com.jed.jeep.entity.Jeep;
+
+import java.util.List;
+
+public class FetchJeepTestSupport extends BaseTest {
+
+  protected List<Jeep> buildExpected() {
+    return null;
+  }
 }
