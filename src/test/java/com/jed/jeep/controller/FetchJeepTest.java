@@ -13,12 +13,14 @@ import com.jed.jeep.entity.Jeep;
 import com.jed.jeep.entity.JeepModel;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
+import org.springframework.test.context.jdbc.SqlConfig;
 
 import java.util.List;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
-@Sql(scripts = {"classpath:flyway/migrations/V1.0__Jeep_Schema.sql", "classpath:flyway/migrations/V1.1__Jeep_Data.sql"})
+@Sql(scripts = {"classpath:flyway/migrations/V1.0__Jeep_Schema.sql", "classpath:flyway/migrations/V1.1__Jeep_Data" +
+        ".sql"}, config = @SqlConfig(encoding = "utf-8"))
 class FetchJeepTest extends FetchJeepTestSupport {
 
   @Test
