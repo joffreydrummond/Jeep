@@ -1,3 +1,10 @@
+spring:
+  datasource:
+    password: Tacobell2020
+    username: jeep
+    url: jdbc:mysql://localhost:3306/jeep_db
+
+
 logging:
   level:
     root: warn
