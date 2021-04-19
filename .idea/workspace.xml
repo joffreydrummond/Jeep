@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="created link list. added jeep variables to list in buildexpected">
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/support/FetchJeepTestSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/support/FetchJeepTestSupport.java" afterDir="false" />
+    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="ran fetchjeeptest. created two jeep wranglers in list failed">
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/FetchJeepTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/FetchJeepTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/support/FetchJeepTestSupport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/support/FetchJeepTestSupport.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -376,7 +377,21 @@
       <option name="project" value="LOCAL" />
       <updated>1618805471254</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="ran fetchjeeptest. failed">
+      <created>1618805961430</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1618805961430</updated>
+    </task>
+    <task id="LOCAL-00036" summary="ran fetchjeeptest. created two jeep wranglers in list failed">
+      <created>1618805995541</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1618805995541</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -392,8 +407,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created getbaseuri method" />
-    <MESSAGE value="tested working localserverport annotation" />
     <MESSAGE value="created jeepmodel enum. tested and working. green means go" />
     <MESSAGE value="added maven gitignore file" />
     <MESSAGE value="added getrestemplate method. failed test" />
@@ -417,7 +430,9 @@
     <MESSAGE value="create buildexpected method" />
     <MESSAGE value="added noargs and all args annotation to Jeep class" />
     <MESSAGE value="created link list. added jeep variables to list in buildexpected" />
-    <option name="LAST_COMMIT_MESSAGE" value="created link list. added jeep variables to list in buildexpected" />
+    <MESSAGE value="ran fetchjeeptest. failed" />
+    <MESSAGE value="ran fetchjeeptest. created two jeep wranglers in list failed" />
+    <option name="LAST_COMMIT_MESSAGE" value="ran fetchjeeptest. created two jeep wranglers in list failed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
