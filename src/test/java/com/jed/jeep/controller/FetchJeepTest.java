@@ -12,11 +12,13 @@ import com.jed.jeep.controller.support.FetchJeepTestSupport;
 import com.jed.jeep.entity.Jeep;
 import com.jed.jeep.entity.JeepModel;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.jdbc.Sql;
 
 import java.util.List;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
+@Sql(scripts = {"classpath:flyway/migrations/V1.0__Jeep_Schema.sql", "classpath:flyway/migrations/V1.1__Jeep_Data.sql"})
 class FetchJeepTest extends FetchJeepTestSupport {
 
   @Test
