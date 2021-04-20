@@ -2,6 +2,8 @@
 package com.jed.jeep.controller;
 
 import java.util.List;
+
+import com.jed.jeep.entity.JeepModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -62,7 +64,7 @@ public interface JeepSalesController {
     @ResponseStatus(code = HttpStatus.OK)
     List<Jeep> fetchJeeps(
             @RequestParam(required = false)
-                    String model,
+                    JeepModel model,
             @RequestParam(required = false)
                     String trim);
     // @formatter:on

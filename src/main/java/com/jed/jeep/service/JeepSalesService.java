@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface JeepSalesService {
 
-    List<Jeep> fetchJeeps(String model, String trim);
+    List<Jeep> fetchJeeps(JeepModel model, String trim);
 }

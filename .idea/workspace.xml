@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="added service annotation to DefaultJeepSalesService">
+    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="ran testdb method to see if rows were being queried from db. pass">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/JeepSales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/JeepSales.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/DefaultJeepSalesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/DefaultJeepSalesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/JeepSalesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/JeepSalesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/service/DefaultJeepSalesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/service/DefaultJeepSalesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/service/JeepSalesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/service/JeepSalesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/JeepSales.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jed/jeep/JeepSales.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/controller/DefaultJeepSalesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jed/jeep/controller/DefaultJeepSalesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/controller/JeepSalesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jed/jeep/controller/JeepSalesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/service/JeepSalesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jed/jeep/service/JeepSalesService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,13 +26,16 @@
       <list>
         <option value="AnnotationType" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.3.5/spring-beans-5.3.5.jar!/org/springframework/beans/factory/annotation/Autowired.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1rDEvjqzYV7mCZLV8dGIQR5eqFO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -38,6 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/jed" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -61,7 +73,7 @@
       <recent name="C:\Users\Joffrey New\Desktop\Promineo Tech - 2021\Week13\Code" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JeepSales">
+  <component name="RunManager" selected="JUnit.FetchJeepTest">
     <configuration name="JeepSales" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jed.jeep.JeepSales" />
       <module name="Jeep" />
@@ -106,6 +118,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FetchJeepTest.testDb" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Jeep" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jed.jeep.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jed.jeep.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.jed.jeep.controller.FetchJeepTest" />
+      <option name="METHOD_NAME" value="testDb" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FetchJeepTest.testThatJeepsAreReturnedWhenAValidModelAndTrimAreSupplied" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Jeep" />
       <extension name="coverage">
@@ -124,8 +152,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JeepSales" />
         <item itemvalue="JUnit.FetchJeepTest" />
+        <item itemvalue="Application.JeepSales" />
+        <item itemvalue="JUnit.FetchJeepTest.testDb" />
         <item itemvalue="JUnit.FetchJeepTest.testThatJeepsAreReturnedWhenAValidModelAndTrimAreSupplied" />
         <item itemvalue="JUnit.FetchJeepTest.name" />
       </list>
@@ -427,7 +456,63 @@
       <option name="project" value="LOCAL" />
       <updated>1618808990296</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="added dependencies to database. mysql and jdbc. failed">
+      <created>1618810319387</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1618810319387</updated>
+    </task>
+    <task id="LOCAL-00043" summary="added connection to db using application.yaml file. passed">
+      <created>1618810608439</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1618810608439</updated>
+    </task>
+    <task id="LOCAL-00044" summary="added h2 dependency">
+      <created>1618812330905</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1618812330905</updated>
+    </task>
+    <task id="LOCAL-00045" summary="edited application-test.yaml to point to h2 database">
+      <created>1618812452567</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1618812452567</updated>
+    </task>
+    <task id="LOCAL-00046" summary="added sql script annotation to FetchJeepTest">
+      <created>1618812629910</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1618812629910</updated>
+    </task>
+    <task id="LOCAL-00047" summary="added sql script config annotation to FetchJeepTest">
+      <created>1618812690722</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1618812690723</updated>
+    </task>
+    <task id="LOCAL-00048" summary="added testdb method. pass">
+      <created>1618812788474</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1618812788474</updated>
+    </task>
+    <task id="LOCAL-00049" summary="ran testdb method to see if rows were being queried from db. pass">
+      <created>1618812980519</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1618812980519</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -443,14 +528,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added response entity type jeep. passed" />
-    <MESSAGE value="added instance variables to Jeep class. changed fethcjeep to match instance variables. failed" />
-    <MESSAGE value="added openapi definition. failed" />
-    <MESSAGE value="added openapi params. failed" />
-    <MESSAGE value="fixed errors with instance variables from jeep class" />
-    <MESSAGE value="getbaseuri string format working. failed" />
-    <MESSAGE value="added defaultjavasalescontroller. failed" />
-    <MESSAGE value="added assert that. imported static method that checks res status" />
     <MESSAGE value="openapi JeepSales working. displaying correctly. passed" />
     <MESSAGE value="added slf4j annotation" />
     <MESSAGE value="added log.info in defaultjeepsalescontroller" />
@@ -468,7 +545,15 @@
     <MESSAGE value="created jeelsaleservice interface" />
     <MESSAGE value="created defaultjeepsaleservice class" />
     <MESSAGE value="added service annotation to DefaultJeepSalesService" />
-    <option name="LAST_COMMIT_MESSAGE" value="added service annotation to DefaultJeepSalesService" />
+    <MESSAGE value="added dependencies to database. mysql and jdbc. failed" />
+    <MESSAGE value="added connection to db using application.yaml file. passed" />
+    <MESSAGE value="added h2 dependency" />
+    <MESSAGE value="edited application-test.yaml to point to h2 database" />
+    <MESSAGE value="added sql script annotation to FetchJeepTest" />
+    <MESSAGE value="added sql script config annotation to FetchJeepTest" />
+    <MESSAGE value="added testdb method. pass" />
+    <MESSAGE value="ran testdb method to see if rows were being queried from db. pass" />
+    <option name="LAST_COMMIT_MESSAGE" value="ran testdb method to see if rows were being queried from db. pass" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
