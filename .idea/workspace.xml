@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="added bean validator">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/JeepSalesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/JeepSalesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/controller/JeepSalesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jed/jeep/controller/JeepSalesController.class" afterDir="false" />
-    </list>
+    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="bad request ConstraintViolationException added. pass" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,13 +162,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618502493173</updated>
-    </task>
-    <task id="LOCAL-00009" summary="created getbaseuri method">
-      <created>1618508770578</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1618508770578</updated>
     </task>
     <task id="LOCAL-00010" summary="tested working localserverport annotation">
       <created>1618509083893</created>
@@ -510,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620195812286</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="bad request ConstraintViolationException added. pass">
+      <created>1620196775488</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1620196775488</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -526,7 +522,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create buildexpected method" />
     <MESSAGE value="added noargs and all args annotation to Jeep class" />
     <MESSAGE value="created link list. added jeep variables to list in buildexpected" />
     <MESSAGE value="ran fetchjeeptest. failed" />
@@ -551,7 +546,8 @@
     <MESSAGE value="500 internal server error. fail" />
     <MESSAGE value="created handler method for nosuchelementexception. pass" />
     <MESSAGE value="added bean validator" />
-    <option name="LAST_COMMIT_MESSAGE" value="added bean validator" />
+    <MESSAGE value="bad request ConstraintViolationException added. pass" />
+    <option name="LAST_COMMIT_MESSAGE" value="bad request ConstraintViolationException added. pass" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
