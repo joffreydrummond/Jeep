@@ -1,4 +1,4 @@
-package com.jed.jeep.dao;
+package com.jed.jeep.dao1;
 
 import com.jed.jeep.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import java.sql.SQLException;
 import java.util.*;
 
 @Component
-public class DefaultJeepOrderDao implements JeepOrderDao {
+public class DefaultJeepOrderDao11 implements JeepOrderDao1 {
 
   @Autowired
   private NamedParameterJdbcTemplate jdbcTemplate;
@@ -306,7 +306,7 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
       return Jeep.builder()
               .basePrice(rs.getBigDecimal("base_price"))
               .modelId(JeepModel.valueOf(rs.getString("model_id")))
-              .modelPK(rs.getInt("model_pk"))
+              .modelPK((long) rs.getInt("model_pk"))
               .numDoors(rs.getInt("num_doors"))
               .trimLevel(rs.getString("trim_level"))
               .wheelSize(rs.getInt("wheel_size"))

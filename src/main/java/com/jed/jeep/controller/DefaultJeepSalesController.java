@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController @Slf4j
 public class DefaultJeepSalesController implements JeepSalesController {
+
   @Autowired
   private JeepSalesService jeepSalesService;
 

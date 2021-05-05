@@ -1,4 +1,4 @@
-package com.jed.jeep.dao;
+package com.jed.jeep.dao1;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,7 +10,7 @@ import com.jed.jeep.entity.JeepModel;
 import com.jed.jeep.entity.Option;
 import com.jed.jeep.entity.Tire;
 
-public interface JeepOrderDao {
+public interface JeepOrderDao1 {
   List<Option> fetchOptions(List<String> optionIds);
   Optional<Customer> fetchCustomer(String customerId);
   Optional<Jeep> fetchModel(JeepModel model, String trim, int doors);
