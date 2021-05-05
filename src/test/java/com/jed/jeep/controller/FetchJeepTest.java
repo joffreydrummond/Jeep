@@ -79,7 +79,7 @@ class FetchJeepTest extends FetchJeepTestSupport {
                     .exchange(uri, HttpMethod.GET, null, new ParameterizedTypeReference<>() {});
 
     // then: a not found status code is returned 404 NOT Found
-    assertThat(res.getStatusCode()).isEqualTo(HttpStatus.OK);
+    assertThat(res.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
 
     // and: error message is returned
 
