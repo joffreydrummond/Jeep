@@ -21,19 +21,23 @@ import org.springframework.test.context.jdbc.SqlConfig;
 import org.springframework.test.jdbc.JdbcTestUtils;
 
 import java.util.List;
+import java.util.Map;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
-@Sql(scripts = {"classpath:flyway/migrations/V1.0__Jeep_Schema.sql", "classpath:flyway/migrations/V1.1__Jeep_Data" +
-        ".sql"}, config = @SqlConfig(encoding = "utf-8"))
+@Sql(
+    scripts = {
+      "classpath:flyway/migrations/V1.0__Jeep_Schema.sql",
+      "classpath:flyway/migrations/V1.1__Jeep_Data" + ".sql"
+    },
+    config = @SqlConfig(encoding = "utf-8"))
 class FetchJeepTest extends FetchJeepTestSupport {
 
-  @Autowired
-  private JdbcTemplate jdbcTemplate;
+  @Autowired private JdbcTemplate jdbcTemplate;
 
   @Test
-  void testDb(){
-  int numRows =  JdbcTestUtils.countRowsInTable(jdbcTemplate, "customers");
+  void testDb() {
+    int numRows = JdbcTestUtils.countRowsInTable(jdbcTemplate, "customers");
     System.out.println("Num: " + numRows);
   }
 
@@ -74,14 +78,21 @@ class FetchJeepTest extends FetchJeepTestSupport {
     String uri = String.format("%s?model=%s&trim=%s", getBaseUri(), model, trim);
 
     // when: a connection is made to uri
-    ResponseEntity<?> res =
-            getRestTemplate()
-                    .exchange(uri, HttpMethod.GET, null, new ParameterizedTypeReference<>() {});
+    ResponseEntity<Map<String, Object>> res =
+        getRestTemplate()
+            .exchange(uri, HttpMethod.GET, null, new ParameterizedTypeReference<>() {});
 
     // then: a not found status code is returned 404 NOT Found
     assertThat(res.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
 
     // and: error message is returned
+    Map<String, Object> error = res.getBody();
 
+    assertThat(error)
+        .containsKey("message")
+        .containsEntry("status", HttpStatus.NOT_FOUND.value())
+        .containsEntry("uri","/jeeps" )
+        .containsKey("timestamp")
+        .containsEntry("reason", HttpStatus.NOT_FOUND.getReasonPhrase());
   }
 }
