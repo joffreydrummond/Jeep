@@ -62,4 +62,26 @@ class FetchJeepTest extends FetchJeepTestSupport {
     actual.forEach(jeep -> jeep.setModelPK(null));
     assertThat(res.getBody()).isEqualTo(expected);
   }
+
+  @Disabled
+  @Test
+  void testThatAnErrorMessageIsReturnedWhenAInvalidTrimIsSupplied() {
+
+    // given: a valid model, trim and uri
+
+    JeepModel model = JeepModel.WRANGLER;
+    String trim = "Invalid value";
+    String uri = String.format("%s?model=%s&trim=%s", getBaseUri(), model, trim);
+
+    // when: a connection is made to uri
+    ResponseEntity<?> res =
+            getRestTemplate()
+                    .exchange(uri, HttpMethod.GET, null, new ParameterizedTypeReference<>() {});
+
+    // then: a not found status code is returned 404 NOT Found
+    assertThat(res.getStatusCode()).isEqualTo(HttpStatus.OK);
+
+    // and: error message is returned
+
+  }
 }

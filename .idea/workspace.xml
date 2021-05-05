@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="jsonignore to ignore primary key">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/Jeep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/Jeep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/service/DefaultJeepSalesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/service/DefaultJeepSalesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/support/FetchJeepTestSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/support/FetchJeepTestSupport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/support/FetchJeepTestSupport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/support/FetchJeepTestSupport.class" afterDir="false" />
+    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="added comparator to expected and actual responses. modelid, trimlevel, numdoors">
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/FetchJeepTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/FetchJeepTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +65,7 @@
       <recent name="C:\Users\Joffrey New\Desktop\Promineo Tech - 2021\Week13\Code" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FetchJeepTest.testThatJeepsAreReturnedWhenAValidModelAndTrimAreSupplied">
+  <component name="RunManager" selected="JUnit.FetchJeepTest.testThatAnErrorMessageIsReturnedWhenAInvalidTrimIsSupplied">
     <configuration name="JeepSales" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jed.jeep.JeepSales" />
       <module name="Jeep" />
@@ -98,22 +94,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FetchJeepTest.name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Jeep" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jed.jeep.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jed.jeep.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.jed.jeep.controller.FetchJeepTest" />
-      <option name="METHOD_NAME" value="name" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FetchJeepTest.testDb" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Jeep" />
       <extension name="coverage">
@@ -125,6 +105,22 @@
       <option name="PACKAGE_NAME" value="com.jed.jeep.controller" />
       <option name="MAIN_CLASS_NAME" value="com.jed.jeep.controller.FetchJeepTest" />
       <option name="METHOD_NAME" value="testDb" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FetchJeepTest.testThatAnErrorMessageIsReturnedWhenAInvalidTrimIsSupplied" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Jeep" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jed.jeep.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jed.jeep.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.jed.jeep.controller.FetchJeepTest" />
+      <option name="METHOD_NAME" value="testThatAnErrorMessageIsReturnedWhenAInvalidTrimIsSupplied" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FetchJeepTest.testThatAnErrorMessageIsReturnedWhenAInvalidTrimIsSupplied" />
         <item itemvalue="JUnit.FetchJeepTest.testThatJeepsAreReturnedWhenAValidModelAndTrimAreSupplied" />
         <item itemvalue="JUnit.FetchJeepTest.testDb" />
         <item itemvalue="JUnit.FetchJeepTest" />
         <item itemvalue="Application.JeepSales" />
-        <item itemvalue="JUnit.FetchJeepTest.name" />
       </list>
     </recent_temporary>
   </component>
@@ -164,13 +160,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618502493173</updated>
-    </task>
-    <task id="LOCAL-00004" summary="added dao files from source code">
-      <created>1618506843586</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1618506843586</updated>
     </task>
     <task id="LOCAL-00005" summary="added dao files from source code">
       <created>1618506953624</created>
@@ -508,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620189789597</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="added comparator to expected and actual responses. modelid, trimlevel, numdoors">
+      <created>1620190330278</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1620190330278</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -524,7 +520,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="tested jeepsales fetchjeep method model &amp; trim. working" />
     <MESSAGE value="add scanbasepackages to JeepSales class" />
     <MESSAGE value="fixed basetest, fetchjeeptest pass" />
     <MESSAGE value="added application.yaml file" />
@@ -549,7 +544,8 @@
     <MESSAGE value="created new JeepOrderDao because package was not being found by springboot. queried sql for jeep specs. fail assertion" />
     <MESSAGE value="fixed null value exception in modelpk. pass" />
     <MESSAGE value="jsonignore to ignore primary key" />
-    <option name="LAST_COMMIT_MESSAGE" value="jsonignore to ignore primary key" />
+    <MESSAGE value="added comparator to expected and actual responses. modelid, trimlevel, numdoors" />
+    <option name="LAST_COMMIT_MESSAGE" value="added comparator to expected and actual responses. modelid, trimlevel, numdoors" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
