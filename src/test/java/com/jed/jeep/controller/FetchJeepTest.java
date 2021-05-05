@@ -4,6 +4,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import static org.junit.jupiter.params.provider.Arguments.arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
@@ -22,6 +26,7 @@ import org.springframework.test.jdbc.JdbcTestUtils;
 
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
@@ -69,7 +74,7 @@ class FetchJeepTest extends FetchJeepTestSupport {
 
   @Disabled
   @Test
-  void testThatAnErrorMessageIsReturnedWhenAInvalidTrimIsSupplied() {
+  void testThatAnErrorMessageIsReturnedWhenAnUnknownTrimIsSupplied() {
 
     // given: a valid model, trim and uri
 
@@ -88,11 +93,35 @@ class FetchJeepTest extends FetchJeepTestSupport {
     // and: error message is returned
     Map<String, Object> error = res.getBody();
 
-    assertThat(error)
-        .containsKey("message")
-        .containsEntry("status", HttpStatus.NOT_FOUND.value())
-        .containsEntry("uri","/jeeps" )
-        .containsKey("timestamp")
-        .containsEntry("reason", HttpStatus.NOT_FOUND.getReasonPhrase());
+    assertErrorMessageValid(error, HttpStatus.NOT_FOUND);
+  }
+
+  @Disabled
+  @ParameterizedTest @MethodSource("com.jed.jeep.controller.FetchJeepTest#parametersForInvalidInput")
+  void testThatAnErrorMessageIsReturnedWhenAnInvalidValueIsSupplied(
+      String model, String trim, String reason) {
+
+    // given: a valid model, trim and uri
+
+    String uri = String.format("%s?model=%s&trim=%s", getBaseUri(), model, trim);
+
+    // when: a connection is made to uri
+    ResponseEntity<Map<String, Object>> res =
+        getRestTemplate()
+            .exchange(uri, HttpMethod.GET, null, new ParameterizedTypeReference<>() {});
+
+    // then: a not found status code is returned 404 NOT Found
+    assertThat(res.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
+
+    // and: error message is returned
+    Map<String, Object> error = res.getBody();
+
+    assertErrorMessageValid(error, HttpStatus.BAD_REQUEST);
+  }
+
+  static Stream<Arguments> parametersForInvalidInput(){
+    return Stream.of(
+            arguments("WRANGLER", "$%^&*&^(", "Trim contains non-alphanumeric characters")
+    );
   }
 }

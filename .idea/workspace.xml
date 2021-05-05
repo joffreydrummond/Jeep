@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="500 internal server error. fail">
+    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="created handler method for nosuchelementexception. pass">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/FetchJeepTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/FetchJeepTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/support/FetchJeepTestSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/support/FetchJeepTestSupport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/FetchJeepTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/FetchJeepTest$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/FetchJeepTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/FetchJeepTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/support/FetchJeepTestSupport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/support/FetchJeepTestSupport.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,35 +70,7 @@
       <recent name="C:\Users\Joffrey New\Desktop\Promineo Tech - 2021\Week13\Code" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FetchJeepTest.testThatAnErrorMessageIsReturnedWhenAInvalidTrimIsSupplied">
-    <configuration name="JeepSales" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jed.jeep.JeepSales" />
-      <module name="Jeep" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jed.jeep.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FetchJeepTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Jeep" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jed.jeep.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jed.jeep.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.jed.jeep.controller.FetchJeepTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.FetchJeepTest.testThatAnErrorMessageIsReturnedWhenAnInvalidValueIsSupplied">
     <configuration name="FetchJeepTest.testDb" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Jeep" />
       <extension name="coverage">
@@ -129,6 +103,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FetchJeepTest.testThatAnErrorMessageIsReturnedWhenAnInvalidValueIsSupplied" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Jeep" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jed.jeep.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jed.jeep.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.jed.jeep.controller.FetchJeepTest" />
+      <option name="METHOD_NAME" value="testThatAnErrorMessageIsReturnedWhenAnInvalidValueIsSupplied(java.lang.String,java.lang.String,java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FetchJeepTest.testThatAnErrorMessageIsReturnedWhenAnUnknownTrimIsSupplied" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Jeep" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jed.jeep.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jed.jeep.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.jed.jeep.controller.FetchJeepTest" />
+      <option name="METHOD_NAME" value="testThatAnErrorMessageIsReturnedWhenAnUnknownTrimIsSupplied" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FetchJeepTest.testThatJeepsAreReturnedWhenAValidModelAndTrimAreSupplied" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Jeep" />
       <extension name="coverage">
@@ -147,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FetchJeepTest.testThatAnErrorMessageIsReturnedWhenAnInvalidValueIsSupplied" />
+        <item itemvalue="JUnit.FetchJeepTest.testThatAnErrorMessageIsReturnedWhenAnUnknownTrimIsSupplied" />
         <item itemvalue="JUnit.FetchJeepTest.testThatAnErrorMessageIsReturnedWhenAInvalidTrimIsSupplied" />
         <item itemvalue="JUnit.FetchJeepTest.testThatJeepsAreReturnedWhenAValidModelAndTrimAreSupplied" />
         <item itemvalue="JUnit.FetchJeepTest.testDb" />
-        <item itemvalue="JUnit.FetchJeepTest" />
-        <item itemvalue="Application.JeepSales" />
       </list>
     </recent_temporary>
   </component>
@@ -163,13 +169,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618502493173</updated>
-    </task>
-    <task id="LOCAL-00007" summary="added webenvironment random port to Fetchjeep test class">
-      <created>1618508459102</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1618508459102</updated>
     </task>
     <task id="LOCAL-00008" summary="added local server port to the basetest class">
       <created>1618508561969</created>
@@ -507,7 +506,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620191257841</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="created handler method for nosuchelementexception. pass">
+      <created>1620192745123</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1620192745123</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -523,7 +529,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added application.yaml file" />
     <MESSAGE value="added application-test.yaml file to test resources" />
     <MESSAGE value="create buildexpected method" />
     <MESSAGE value="added noargs and all args annotation to Jeep class" />
@@ -548,18 +553,8 @@
     <MESSAGE value="added comparator to expected and actual responses. modelid, trimlevel, numdoors" />
     <MESSAGE value="created 404 method. failed" />
     <MESSAGE value="500 internal server error. fail" />
-    <option name="LAST_COMMIT_MESSAGE" value="500 internal server error. fail" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/jed/jeep/service/DefaultJeepSalesService.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="created handler method for nosuchelementexception. pass" />
+    <option name="LAST_COMMIT_MESSAGE" value="created handler method for nosuchelementexception. pass" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
