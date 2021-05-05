@@ -2,6 +2,7 @@ package com.jed.jeep.controller;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.jed.jeep.Constants;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -46,7 +47,7 @@ class FetchJeepTest extends FetchJeepTestSupport {
     System.out.println("Num: " + numRows);
   }
 
-  @Disabled
+
   @Test
   void testThatJeepsAreReturnedWhenAValidModelAndTrimAreSupplied() {
 
@@ -72,7 +73,7 @@ class FetchJeepTest extends FetchJeepTestSupport {
     assertThat(res.getBody()).isEqualTo(expected);
   }
 
-  @Disabled
+
   @Test
   void testThatAnErrorMessageIsReturnedWhenAnUnknownTrimIsSupplied() {
 
@@ -96,8 +97,9 @@ class FetchJeepTest extends FetchJeepTestSupport {
     assertErrorMessageValid(error, HttpStatus.NOT_FOUND);
   }
 
-  @Disabled
-  @ParameterizedTest @MethodSource("com.jed.jeep.controller.FetchJeepTest#parametersForInvalidInput")
+
+  @ParameterizedTest
+  @MethodSource("com.jed.jeep.controller.FetchJeepTest#parametersForInvalidInput")
   void testThatAnErrorMessageIsReturnedWhenAnInvalidValueIsSupplied(
       String model, String trim, String reason) {
 
@@ -119,9 +121,10 @@ class FetchJeepTest extends FetchJeepTestSupport {
     assertErrorMessageValid(error, HttpStatus.BAD_REQUEST);
   }
 
-  static Stream<Arguments> parametersForInvalidInput(){
+  static Stream<Arguments> parametersForInvalidInput() {
     return Stream.of(
-            arguments("WRANGLER", "$%^&*&^(", "Trim contains non-alphanumeric characters")
-    );
+        arguments("WRANGLER", "$%^&*&^(", "Trim contains non-alphanumeric characters"),
+        arguments("WRANGLER", "C".repeat(Constants.TRIM_MAX_LENGTH + 1), "Trim length too long"), arguments("INVALID"
+                    , "Sport", "Model is not enum value"));
   }
 }

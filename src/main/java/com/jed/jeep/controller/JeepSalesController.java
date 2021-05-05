@@ -2,6 +2,7 @@ package com.jed.jeep.controller;
 
 import java.util.List;
 
+import com.jed.jeep.Constants;
 import com.jed.jeep.entity.JeepModel;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.http.HttpStatus;
@@ -28,7 +29,9 @@ import javax.validation.constraints.Pattern;
     info = @Info(title = "Joffrey Jeep Sales Service"),
     servers = {@Server(url = "http://localhost:8080", description = "Local server.")})
 public interface JeepSalesController {
-  // @formatter:off
+    public static final int TRIM_MAX_LENGTH = 30;
+
+        // @formatter:off
   @Operation(
       summary = "Returns a list of Jeeps",
       description = "Returns a list of Jeeps given an optional model and/or trim",
@@ -69,7 +72,7 @@ public interface JeepSalesController {
   @ResponseStatus(code = HttpStatus.OK)
   List<Jeep> fetchJeeps(
       @RequestParam(required = false) JeepModel model,
-      @Length(max = 30) @Pattern(regexp = "[\\w\\s]*") @RequestParam(required = false) String trim);
+      @Length(max = Constants.TRIM_MAX_LENGTH) @Pattern(regexp = "[\\w\\s]*") @RequestParam(required = false) String trim);
   // @formatter:on
 
 }
