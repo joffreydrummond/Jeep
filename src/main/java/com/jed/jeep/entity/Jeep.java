@@ -1,5 +1,6 @@
 package com.jed.jeep.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import java.math.BigDecimal;
@@ -15,5 +16,10 @@ public class Jeep {
     private int numDoors;
     private int wheelSize;
     private BigDecimal basePrice;
+
+    @JsonIgnore
+    public Long getModelPK(){
+        return modelPK;
+    }
 
 }
