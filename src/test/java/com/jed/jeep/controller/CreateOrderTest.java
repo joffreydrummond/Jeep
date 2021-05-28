@@ -1,8 +1,10 @@
 package com.jed.jeep.controller;
 
 import com.jed.jeep.controller.support.CreateOrderTestSupport;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.jdbc.SqlConfig;
@@ -21,24 +23,15 @@ class CreateOrderTest extends CreateOrderTestSupport {
   @Test
   void testCreateOrderReturnsSuccess201() {
 
-    String body =
-        "{\n"
-            + "  \"customer\":\"MORISON_LINA\",\n"
-            + "  \"model\":\"WRANGLER\",\n"
-            + "  \"trim\":\"Sport Altitude\",\n"
-            + "  \"doors\":\"4\",\n"
-            + "  \"color\":\"EXT_NACHO\",\n"
-            + "  \"engine\":\"2_0_Turbo\",\n"
-            + "  \"tire\":\"35_TOYO\",\n"
-            + "  \"options\":[\n"
-            + "  \"DOOR_QUAD_4\", \n"
-            + "  \"EXT_AEV_LIFT\", \n"
-            + "  \"EXT_WARN_WINCH\", \n"
-            + "  \"EXT_WARN_BUMPER_FRONT\", \n"
-            + "  \"EXT_WARN_BUMPER_REAR\", \n"
-            + "  \"EXT_ARB_COMPRESSOR\", \n"
-            + "]\n"
-            + "}\n"
-            + "";
+    String body = createOrderBody();
+
+    //when order is sent to
+      ResponseEntity<Order> = getRestTemplate().exchange(null, null, null , null)
+
+
+      //then a 201 status is returned
+
+      //and the returned order is correct
+
   }
 }
