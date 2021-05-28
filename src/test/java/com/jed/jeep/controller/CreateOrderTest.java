@@ -4,10 +4,15 @@ import com.jed.jeep.controller.support.CreateOrderTestSupport;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.jdbc.SqlConfig;
+
+import static org.assertj.core.api.Assertions.assertThat;
 // import static  org.junit.jupiter.api.Assertions.
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -24,13 +29,15 @@ class CreateOrderTest extends CreateOrderTestSupport {
   void testCreateOrderReturnsSuccess201() {
 
     String body = createOrderBody();
+    String uri = getBaseUriForOrders();
+    HttpEntity<String> bodyEntity = new HttpEntity<>(body);
 
     //when order is sent to
-      ResponseEntity<Order> = getRestTemplate().exchange(null, null, null , null)
+      ResponseEntity<?> res = getRestTemplate().exchange(uri, HttpMethod.POST, bodyEntity , Object.class);
 
 
       //then a 201 status is returned
-
+assertThat(res.getStatusCode()).isEqualTo(HttpStatus.CREATED);
       //and the returned order is correct
 
   }
