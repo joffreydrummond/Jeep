@@ -1,6 +1,7 @@
 package com.jed.jeep.controller;
 
 import com.jed.jeep.controller.support.CreateOrderTestSupport;
+import com.jed.jeep.entity.JeepModel;
 import com.jed.jeep.entity.Order;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -44,6 +45,16 @@ class CreateOrderTest extends CreateOrderTestSupport {
     // and the returned order is correct
 
     assertThat(res.getBody()).isNotNull();
+
+    Order order = res.getBody();
+    assertThat(order.getCustomer().getCustomerId()).isEqualTo("MORISON_LINA");
+    assertThat(order.getModel().getModelId()).isEqualTo(JeepModel.WRANGLER);
+    assertThat(order.getModel().getTrimLevel()).isEqualTo("Sport Altitude");
+    assertThat(order.getModel().getNumDoors()).isEqualTo(4);
+    assertThat(order.getEngine().getEngineId()).isEqualTo("2_0_TURBO");
+    assertThat(order.getTire().getTireId()).isEqualTo("35_TOYO");
+    assertThat(order.getOptions()).hasSize(6);
+
 
   }
 }
