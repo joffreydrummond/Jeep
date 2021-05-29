@@ -20,11 +20,24 @@ import java.util.*;
 @Component
 public class DefaultJeepOrderDao implements JeepOrderDao {
 
-  @Autowired
-  private NamedParameterJdbcTemplate jdbcTemplate;
+  @Autowired private NamedParameterJdbcTemplate jdbcTemplate;
+
+  @Override
+  public Order saveOrder(
+      Customer customer,
+      Jeep jeep,
+      Color color,
+      Engine engine,
+      Tire tire,
+      BigDecimal price,
+      List<Option> options) {
+
+    SqlParams params = generateInsertSql(customer, jeep, color, engine, tire, price);
+
+    return null;
+  }
 
   /**
-   *
    * @param option
    * @param orderPK
    * @return
@@ -33,7 +46,8 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
     SqlParams params = new SqlParams();
 
     // @formatter:off
-    params.sql = ""
+    params.sql =
+        ""
             + "INSERT INTO order_options ("
             + "option_fk, order_fk"
             + ") VALUES ("
@@ -48,7 +62,6 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
   }
 
   /**
-   *
    * @param customer
    * @param jeep
    * @param color
@@ -57,10 +70,11 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
    * @param price
    * @return
    */
-  private SqlParams generateInsertSql(Customer customer, Jeep jeep, Color color,
-                                      Engine engine, Tire tire, BigDecimal price) {
+  private SqlParams generateInsertSql(
+      Customer customer, Jeep jeep, Color color, Engine engine, Tire tire, BigDecimal price) {
     // @formatter:off
-    String sql = ""
+    String sql =
+        ""
             + "INSERT INTO orders ("
             + "customer_fk, color_fk, engine_fk, tire_fk, model_fk, price"
             + ") VALUES ("
@@ -81,9 +95,7 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
     return params;
   }
 
-  /**
-   *
-   */
+  /** */
   @Override
   public List<Option> fetchOptions(List<String> optionIds) {
     if (optionIds.isEmpty()) {
@@ -93,10 +105,7 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
     Map<String, Object> params = new HashMap<>();
 
     // @formatter:off
-    String sql = ""
-            + "SELECT * "
-            + "FROM options "
-            + "WHERE option_id IN(";
+    String sql = "" + "SELECT * " + "FROM options " + "WHERE option_id IN(";
     // @formatter:on
 
     for (int index = 0; index < optionIds.size(); index++) {
@@ -108,11 +117,14 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
     sql = sql.substring(0, sql.length() - 2);
     sql += ")";
 
-    return jdbcTemplate.query(sql, params, new RowMapper<Option>() {
-      @Override
-      public Option mapRow(ResultSet rs, int rowNum) throws SQLException {
-        // @formatter:off
-        return Option.builder()
+    return jdbcTemplate.query(
+        sql,
+        params,
+        new RowMapper<Option>() {
+          @Override
+          public Option mapRow(ResultSet rs, int rowNum) throws SQLException {
+            // @formatter:off
+            return Option.builder()
                 .category(OptionType.valueOf(rs.getString("category")))
                 .manufacturer(rs.getString("manufacturer"))
                 .name(rs.getString("name"))
@@ -120,37 +132,30 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
                 .optionPK(rs.getLong("option_pk"))
                 .price(rs.getBigDecimal("price"))
                 .build();
-        // @formatter:on
-      }
-    });
+            // @formatter:on
+          }
+        });
   }
 
-  /**
-   *
-   */
+  /** */
   @Override
   public Optional<Customer> fetchCustomer(String customerId) {
     // @formatter:off
-    String sql = ""
-            + "SELECT * "
-            + "FROM customers "
-            + "WHERE customer_id = :customer_id";
+    String sql = "" + "SELECT * " + "FROM customers " + "WHERE customer_id = :customer_id";
     // @formatter:on
 
     Map<String, Object> params = new HashMap<>();
     params.put("customer_id", customerId);
 
-    return Optional.ofNullable(
-            jdbcTemplate.query(sql, params, new CustomerResultSetExtractor()));
+    return Optional.ofNullable(jdbcTemplate.query(sql, params, new CustomerResultSetExtractor()));
   }
 
-  /**
-   *
-   */
+  /** */
   @Override
   public Optional<Jeep> fetchModel(JeepModel model, String trim, int doors) {
     // @formatter:off
-    String sql = ""
+    String sql =
+        ""
             + "SELECT * "
             + "FROM models "
             + "WHERE model_id = :model_id "
@@ -163,65 +168,46 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
     params.put("trim_level", trim);
     params.put("num_doors", doors);
 
-    return Optional.ofNullable(
-            jdbcTemplate.query(sql, params, new ModelResultSetExtractor()));
+    return Optional.ofNullable(jdbcTemplate.query(sql, params, new ModelResultSetExtractor()));
   }
 
-  /**
-   *
-   */
+  /** */
   @Override
   public Optional<Color> fetchColor(String colorId) {
     // @formatter:off
-    String sql = ""
-            + "SELECT * "
-            + "FROM colors "
-            + "WHERE color_id = :color_id";
+    String sql = "" + "SELECT * " + "FROM colors " + "WHERE color_id = :color_id";
     // @formatter:on
 
     Map<String, Object> params = new HashMap<>();
     params.put("color_id", colorId);
 
-    return Optional.ofNullable(
-            jdbcTemplate.query(sql, params, new ColorResultSetExtractor()));
+    return Optional.ofNullable(jdbcTemplate.query(sql, params, new ColorResultSetExtractor()));
   }
 
-  /**
-   *
-   */
+  /** */
   @Override
   public Optional<Engine> fetchEngine(String engineId) {
     // @formatter:off
-    String sql = ""
-            + "SELECT * "
-            + "FROM engines "
-            + "WHERE engine_id = :engine_id";
+    String sql = "" + "SELECT * " + "FROM engines " + "WHERE engine_id = :engine_id";
     // @formatter:on
 
     Map<String, Object> params = new HashMap<>();
     params.put("engine_id", engineId);
 
-    return Optional.ofNullable(
-            jdbcTemplate.query(sql, params, new EngineResultSetExtractor()));
+    return Optional.ofNullable(jdbcTemplate.query(sql, params, new EngineResultSetExtractor()));
   }
 
-  /**
-   *
-   */
+  /** */
   @Override
   public Optional<Tire> fetchTire(String tireId) {
     // @formatter:off
-    String sql = ""
-            + "SELECT * "
-            + "FROM tires "
-            + "WHERE tire_id = :tire_id";
+    String sql = "" + "SELECT * " + "FROM tires " + "WHERE tire_id = :tire_id";
     // @formatter:on
 
     Map<String, Object> params = new HashMap<>();
     params.put("tire_id", tireId);
 
-    return Optional.ofNullable(
-            jdbcTemplate.query(sql, params, new TireResultSetExtractor()));
+    return Optional.ofNullable(jdbcTemplate.query(sql, params, new TireResultSetExtractor()));
   }
 
   @Override
@@ -229,11 +215,7 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
     return null;
   }
 
-  /**
-   *
-   * @author Promineo
-   *
-   */
+  /** @author Promineo */
   class TireResultSetExtractor implements ResultSetExtractor<Tire> {
     @Override
     public Tire extractData(ResultSet rs) throws SQLException {
@@ -241,22 +223,18 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
 
       // @formatter:off
       return Tire.builder()
-              .manufacturer(rs.getString("manufacturer"))
-              .price(rs.getBigDecimal("price"))
-              .tireId(rs.getString("tire_id"))
-              .tirePK(rs.getLong("tire_pk"))
-              .tireSize(rs.getString("tire_size"))
-              .warrantyMiles(rs.getInt("warranty_miles"))
-              .build();
+          .manufacturer(rs.getString("manufacturer"))
+          .price(rs.getBigDecimal("price"))
+          .tireId(rs.getString("tire_id"))
+          .tirePK(rs.getLong("tire_pk"))
+          .tireSize(rs.getString("tire_size"))
+          .warrantyMiles(rs.getInt("warranty_miles"))
+          .build();
       // @formatter:on
     }
   }
 
-  /**
-   *
-   * @author Promineo
-   *
-   */
+  /** @author Promineo */
   class EngineResultSetExtractor implements ResultSetExtractor<Engine> {
     @Override
     public Engine extractData(ResultSet rs) throws SQLException {
@@ -264,26 +242,22 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
 
       // @formatter:off
       return Engine.builder()
-              .description(rs.getString("description"))
-              .engineId(rs.getString("engine_id"))
-              .enginePK(rs.getLong("engine_pk"))
-              .fuelType(FuelType.valueOf(rs.getString("fuel_type")))
-              .hasStartStop(rs.getBoolean("has_start_stop"))
-              .mpgCity(rs.getFloat("mpg_city"))
-              .mpgHwy(rs.getFloat("mpg_hwy"))
-              .name(rs.getString("name"))
-              .price(rs.getBigDecimal("price"))
-              .sizeInLiters(rs.getFloat("size_in_liters"))
-              .build();
+          .description(rs.getString("description"))
+          .engineId(rs.getString("engine_id"))
+          .enginePK(rs.getLong("engine_pk"))
+          .fuelType(FuelType.valueOf(rs.getString("fuel_type")))
+          .hasStartStop(rs.getBoolean("has_start_stop"))
+          .mpgCity(rs.getFloat("mpg_city"))
+          .mpgHwy(rs.getFloat("mpg_hwy"))
+          .name(rs.getString("name"))
+          .price(rs.getBigDecimal("price"))
+          .sizeInLiters(rs.getFloat("size_in_liters"))
+          .build();
       // @formatter:on
     }
   }
 
-  /**
-   *
-   * @author Promineo
-   *
-   */
+  /** @author Promineo */
   class ColorResultSetExtractor implements ResultSetExtractor<Color> {
     @Override
     public Color extractData(ResultSet rs) throws SQLException {
@@ -291,21 +265,17 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
 
       // @formatter:off
       return Color.builder()
-              .color(rs.getString("color"))
-              .colorId(rs.getString("color_id"))
-              .colorPK(rs.getLong("color_pk"))
-              .isExterior(rs.getBoolean("is_exterior"))
-              .price(rs.getBigDecimal("price"))
-              .build();
+          .color(rs.getString("color"))
+          .colorId(rs.getString("color_id"))
+          .colorPK(rs.getLong("color_pk"))
+          .isExterior(rs.getBoolean("is_exterior"))
+          .price(rs.getBigDecimal("price"))
+          .build();
       // @formatter:on
     }
   }
 
-  /**
-   *
-   * @author Promineo
-   *
-   */
+  /** @author Promineo */
   class ModelResultSetExtractor implements ResultSetExtractor<Jeep> {
     @Override
     public Jeep extractData(ResultSet rs) throws SQLException {
@@ -313,22 +283,18 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
 
       // @formatter:off
       return Jeep.builder()
-              .basePrice(rs.getBigDecimal("base_price"))
-              .modelId(JeepModel.valueOf(rs.getString("model_id")))
-              .modelPK(rs.getLong("model_pk"))
-              .numDoors(rs.getInt("num_doors"))
-              .trimLevel(rs.getString("trim_level"))
-              .wheelSize(rs.getInt("wheel_size"))
-              .build();
+          .basePrice(rs.getBigDecimal("base_price"))
+          .modelId(JeepModel.valueOf(rs.getString("model_id")))
+          .modelPK(rs.getLong("model_pk"))
+          .numDoors(rs.getInt("num_doors"))
+          .trimLevel(rs.getString("trim_level"))
+          .wheelSize(rs.getInt("wheel_size"))
+          .build();
       // @formatter:on
     }
   }
 
-  /**
-   *
-   * @author Promineo
-   *
-   */
+  /** @author Promineo */
   class CustomerResultSetExtractor implements ResultSetExtractor<Customer> {
     @Override
     public Customer extractData(ResultSet rs) throws SQLException {
@@ -336,12 +302,12 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
 
       // @formatter:off
       return Customer.builder()
-              .customerId(rs.getString("customer_id"))
-              .customerPK(rs.getLong("customer_pk"))
-              .firstName(rs.getString("first_name"))
-              .lastName(rs.getString("last_name"))
-              .phone(rs.getString("phone"))
-              .build();
+          .customerId(rs.getString("customer_id"))
+          .customerPK(rs.getLong("customer_pk"))
+          .firstName(rs.getString("first_name"))
+          .lastName(rs.getString("last_name"))
+          .phone(rs.getString("phone"))
+          .build();
       // @formatter:on
 
     }
@@ -351,63 +317,4 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
     String sql;
     MapSqlParameterSource source = new MapSqlParameterSource();
   }
-//  @Autowired private NamedParameterJdbcTemplate jdbcTemplate;
-//
-//  @Override
-//  public List<Jeep> fetchJeeps(JeepModel model, String trim) {
-//    log.debug("DAO: model={}, trim={}", model, trim);
-//
-//    String sql = "SELECT * FROM models WHERE model_id = :model_id AND trim_level= :trim_level";
-//
-//    Map<String, Object> params = new HashMap<>();
-//    params.put("model_id", model.toString());
-//    params.put("trim_level", trim);
-//
-//    return jdbcTemplate.query(
-//        sql,
-//        params,
-//        new RowMapper<Jeep>() {
-//          @Override
-//          public Jeep mapRow(ResultSet rs, int rowNum) throws SQLException {
-//            return Jeep.builder()
-//                .basePrice(new BigDecimal(rs.getString("base_price")))
-//                .modelId(JeepModel.valueOf(rs.getString("model_id")))
-//                .modelPK(rs.getLong("model_pk"))
-//                .numDoors(rs.getInt("num_doors"))
-//                .trimLevel(rs.getString("trim_level"))
-//                .wheelSize(rs.getInt("wheel_size"))
-//                .build();
-//          }
-//        });
-//  }
-//
-//  @Override
-//  public Customer fetchCustomer(String customer_id) {
-//    String sql = "SELECT * FROM customers WHERE customer_id=:customer_id";
-//
-//    Map<String, Object> params = new HashMap<>();
-//    params.put("customer_id", customer_id);
-//
-//    return jdbcTemplate.query(sql, params, new CustomerResultSetExtractor());
-//  }
-//
-//  static class CustomerResultSetExtractor implements ResultSetExtractor<Customer> {
-//    public Customer extractData(ResultSet rs) throws SQLException, DataAccessException {
-//      rs.next();
-//
-//      return Customer.builder()
-//          .customerId(rs.getString("customer_id"))
-//          .customerPK(rs.getLong("customer_pk"))
-//          .firstName(rs.getString("first_name"))
-//          .lastName(rs.getString("last_name"))
-//          .phone(rs.getString("phone"))
-//          .build();
-//    }
-//  }
-
-  //    @Override
-  //    public Order createOrder(OrderRequest orderRequest) {
-  //      log.debug("Order={}", orderRequest);
-  //        return null;
-  //    }
 }
