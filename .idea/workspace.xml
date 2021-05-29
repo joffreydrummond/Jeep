@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="added validation annotations">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/BasicJeepOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/BasicJeepOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/dao1/JeepOrderDao1.source" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/dao1/JeepOrderDao1.source" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/OrderRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/service/DefaultJeepOrderService.source" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/service/DefaultJeepSalesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/service/DefaultJeepSalesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/dao/DefaultJeepOrderDao$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/dao/DefaultJeepOrderDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/dao/JeepOrderDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/OrderRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/service/DefaultJeepSalesService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/CreateOrderTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/CreateOrderTest.class" afterDir="false" />
+    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="created DefaultJeepOrderService">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/dao/JeepOrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/dao/JeepOrderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/service/DefaultJeepOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/service/DefaultJeepOrderService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,27 +169,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618502493173</updated>
-    </task>
-    <task id="LOCAL-00022" summary="added defaultjavasalescontroller. failed">
-      <created>1618682529870</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1618682529870</updated>
-    </task>
-    <task id="LOCAL-00023" summary="added assert that. imported static method that checks res status">
-      <created>1618682925672</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1618682925672</updated>
-    </task>
-    <task id="LOCAL-00024" summary="openapi JeepSales working. displaying correctly. passed">
-      <created>1618685113923</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1618685113923</updated>
     </task>
     <task id="LOCAL-00025" summary="added slf4j annotation">
       <created>1618686015438</created>
@@ -523,7 +492,28 @@
       <option name="project" value="LOCAL" />
       <updated>1622315594895</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="fixed errors in service layer">
+      <created>1622319565749</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1622319565750</updated>
+    </task>
+    <task id="LOCAL-00072" summary="created createOrder in interface JeepOrderService">
+      <created>1622319669223</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1622319669223</updated>
+    </task>
+    <task id="LOCAL-00073" summary="created DefaultJeepOrderService">
+      <created>1622319751993</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1622319751994</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -539,9 +529,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added sql script annotation to FetchJeepTest" />
-    <MESSAGE value="added sql script config annotation to FetchJeepTest" />
-    <MESSAGE value="added testdb method. pass" />
     <MESSAGE value="ran testdb method to see if rows were being queried from db. pass" />
     <MESSAGE value="created new JeepOrderDao because package was not being found by springboot. queried sql for jeep specs. fail assertion" />
     <MESSAGE value="fixed null value exception in modelpk. pass" />
@@ -564,7 +551,10 @@
     <MESSAGE value="added new controller def to JeepOrderController" />
     <MESSAGE value="created BasicJeepOrderController added RestController annotation and sly4j" />
     <MESSAGE value="added assertThat(res.getBody()).isNotNull();" />
-    <option name="LAST_COMMIT_MESSAGE" value="added assertThat(res.getBody()).isNotNull();" />
+    <MESSAGE value="fixed errors in service layer" />
+    <MESSAGE value="created createOrder in interface JeepOrderService" />
+    <MESSAGE value="created DefaultJeepOrderService" />
+    <option name="LAST_COMMIT_MESSAGE" value="created DefaultJeepOrderService" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
