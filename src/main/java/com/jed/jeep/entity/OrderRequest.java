@@ -12,6 +12,5 @@ public class OrderRequest {
   private String color;
   private String engine;
   private String tire;
-
   private List<String> options;
 }

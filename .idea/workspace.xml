@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="added new controller def to JeepOrderController" />
+    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="created BasicJeepOrderController added RestController annotation and sly4j">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/JeepOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/JeepOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/OrderRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/CreateOrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/CreateOrderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/support/CreateOrderTestSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/support/CreateOrderTestSupport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/OrderRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/OrderRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/CreateOrderTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/CreateOrderTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/support/CreateOrderTestSupport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/support/CreateOrderTestSupport.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,13 +175,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618502493173</updated>
-    </task>
-    <task id="LOCAL-00020" summary="fixed errors with instance variables from jeep class">
-      <created>1618528000732</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1618528000732</updated>
     </task>
     <task id="LOCAL-00021" summary="getbaseuri string format working. failed">
       <created>1618682367025</created>
@@ -510,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622231066470</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="created BasicJeepOrderController added RestController annotation and sly4j">
+      <created>1622231394359</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1622231394359</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -526,7 +535,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added h2 dependency" />
     <MESSAGE value="edited application-test.yaml to point to h2 database" />
     <MESSAGE value="added sql script annotation to FetchJeepTest" />
     <MESSAGE value="added sql script config annotation to FetchJeepTest" />
@@ -551,7 +559,8 @@
     <MESSAGE value="added getBaseUriForOrders method to basetest class" />
     <MESSAGE value="added assert to check if order is created" />
     <MESSAGE value="added new controller def to JeepOrderController" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new controller def to JeepOrderController" />
+    <MESSAGE value="created BasicJeepOrderController added RestController annotation and sly4j" />
+    <option name="LAST_COMMIT_MESSAGE" value="created BasicJeepOrderController added RestController annotation and sly4j" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

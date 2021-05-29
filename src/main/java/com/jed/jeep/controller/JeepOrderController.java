@@ -40,7 +40,7 @@ public interface JeepOrderController {
             content =
                 @Content(
                     mediaType = "application/json",
-                    schema = @Schema(implementation = Order.class))),
+                    schema = @Schema(implementation = Object.class))),
         @ApiResponse(
             responseCode = "400",
             description = "The request parameters are invalid",
