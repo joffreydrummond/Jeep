@@ -1,0 +1,279 @@
+Index: src/main/java/com/jed/jeep/entity/OrderRequest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.jed.jeep.entity;\n\nimport java.util.List;\nimport lombok.Data;\n\n@Data\npublic class OrderRequest {\n  private String customer;\n  private JeepModel model;\n  private String trim;\n  private int doors;\n  private String color;\n  private String engine;\n  private String tire;\n  private List<String> options;\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/jed/jeep/entity/OrderRequest.java b/src/main/java/com/jed/jeep/entity/OrderRequest.java
+--- a/src/main/java/com/jed/jeep/entity/OrderRequest.java	
++++ b/src/main/java/com/jed/jeep/entity/OrderRequest.java	
+@@ -2,15 +2,43 @@
+ 
+ import java.util.List;
+ import lombok.Data;
++import org.hibernate.validator.constraints.Length;
++
++import javax.validation.constraints.*;
+ 
+ @Data
+ public class OrderRequest {
++  @NotNull
++  @Length(max = 30)
++  @Pattern(regexp = "[A-Z_]*")
+   private String customer;
+-  private JeepModel model;
++
++  @NotNull private JeepModel model;
++
++  @NotNull
++  @Length(max = 30)
++  @Pattern(regexp = "[A-Z_]*")
+   private String trim;
++
++  @Positive
++  @Min(2)
++  @Max(4)
+   private int doors;
++
++  @NotNull
++  @Length(max = 30)
++  @Pattern(regexp = "[A-Z0-9_]*")
+   private String color;
++
++  @NotNull
++  @Length(max = 30)
++  @Pattern(regexp = "[A-Z0-9_]*")
+   private String engine;
++
++  @NotNull
++  @Length(max = 30)
++  @Pattern(regexp = "[A-Z0-9_]*")
+   private String tire;
+-  private List<String> options;
++
++  private List<@NotNull @Length(max = 30) @Pattern(regexp = "[A-Z0-9_]*") String> options;
+ }
+Index: src/main/java/com/jed/jeep/dao1/JeepOrderDao1.source
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.jed.jeep.dao1;\n\nimport java.util.List;\nimport java.util.Optional;\nimport com.jed.jeep.entity.Color;\nimport com.jed.jeep.entity.Customer;\nimport com.jed.jeep.entity.Engine;\nimport com.jed.jeep.entity.Jeep;\nimport com.jed.jeep.entity.JeepModel;\nimport com.jed.jeep.entity.Option;\nimport com.jed.jeep.entity.Tire;\n\npublic interface JeepOrderDao1 {\n  List<Option> fetchOptions(List<String> optionIds);\n  Optional<Customer> fetchCustomer(String customerId);\n  Optional<Jeep> fetchModel(JeepModel model, String trim, int doors);\n  Optional<Color> fetchColor(String colorId);\n  Optional<Engine> fetchEngine(String engineId);\n  Optional<Tire> fetchTire(String tireId);\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/jed/jeep/dao1/JeepOrderDao1.source b/src/main/java/com/jed/jeep/dao1/JeepOrderDao1.source
+--- a/src/main/java/com/jed/jeep/dao1/JeepOrderDao1.source	
++++ b/src/main/java/com/jed/jeep/dao1/JeepOrderDao1.source	
+@@ -2,13 +2,8 @@
+ 
+ import java.util.List;
+ import java.util.Optional;
+-import com.jed.jeep.entity.Color;
+-import com.jed.jeep.entity.Customer;
+-import com.jed.jeep.entity.Engine;
+-import com.jed.jeep.entity.Jeep;
+-import com.jed.jeep.entity.JeepModel;
+-import com.jed.jeep.entity.Option;
+-import com.jed.jeep.entity.Tire;
++
++import com.jed.jeep.entity.*;
+ 
+ public interface JeepOrderDao1 {
+   List<Option> fetchOptions(List<String> optionIds);
+@@ -17,4 +12,8 @@
+   Optional<Color> fetchColor(String colorId);
+   Optional<Engine> fetchEngine(String engineId);
+   Optional<Tire> fetchTire(String tireId);
++
++  Order createOrder(OrderRequest orderRequest);
++
++  List<Jeep> fetchJeeps(JeepModel model, String trim);
+ }
+Index: src/main/java/com/jed/jeep/controller/JeepOrderController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.jed.jeep.controller;\n\nimport com.jed.jeep.Constants;\nimport com.jed.jeep.entity.Jeep;\nimport com.jed.jeep.entity.JeepModel;\nimport com.jed.jeep.entity.Order;\nimport com.jed.jeep.entity.OrderRequest;\nimport io.swagger.v3.oas.annotations.OpenAPIDefinition;\nimport io.swagger.v3.oas.annotations.Operation;\nimport io.swagger.v3.oas.annotations.Parameter;\nimport io.swagger.v3.oas.annotations.info.Info;\nimport io.swagger.v3.oas.annotations.media.Content;\nimport io.swagger.v3.oas.annotations.media.Schema;\nimport io.swagger.v3.oas.annotations.responses.ApiResponse;\nimport io.swagger.v3.oas.annotations.servers.Server;\nimport org.hibernate.validator.constraints.Length;\nimport org.springframework.http.HttpStatus;\nimport org.springframework.validation.annotation.Validated;\nimport org.springframework.web.bind.annotation.*;\n\nimport javax.validation.constraints.Pattern;\nimport java.util.List;\n\n@Validated\n@RequestMapping(\"/orders\")\n@OpenAPIDefinition(\n    info = @Info(title = \"Joffrey Jeep Order Service\"),\n    servers = {@Server(url = \"http://localhost:8080\", description = \"Local server.\")})\npublic interface JeepOrderController {\n    public static final int TRIM_MAX_LENGTH = 30;\n\n        // @formatter:off\n  @Operation(\n      summary = \"Create an order for a Jeep\",\n      description = \"Returns the created Jeep\",\n      responses = {\n        @ApiResponse(\n            responseCode = \"201\",\n            description = \"The created Jeep is returned\",\n            content =\n                @Content(\n                    mediaType = \"application/json\",\n                    schema = @Schema(implementation = Object.class))),\n        @ApiResponse(\n            responseCode = \"400\",\n            description = \"The request parameters are invalid\",\n            content = @Content(mediaType = \"application/json\")),\n        @ApiResponse(\n            responseCode = \"404\",\n            description = \"A Jeep component was not found with the input criteria\",\n            content = @Content(mediaType = \"application/json\")),\n        @ApiResponse(\n            responseCode = \"500\",\n            description = \"An unplanned error occurred.\",\n            content = @Content(mediaType = \"application/json\"))\n      },\n      parameters = {\n        @Parameter(\n            name = \"orderRequest\",\n            required = true,\n            description = \"The order as JSON\")\n      })\n  @PostMapping\n  @ResponseStatus(code = HttpStatus.CREATED)\n  Order createOrder(@RequestBody OrderRequest orderRequest);\n  // @formatter:on\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/jed/jeep/controller/JeepOrderController.java b/src/main/java/com/jed/jeep/controller/JeepOrderController.java
+--- a/src/main/java/com/jed/jeep/controller/JeepOrderController.java	
++++ b/src/main/java/com/jed/jeep/controller/JeepOrderController.java	
+@@ -18,6 +18,7 @@
+ import org.springframework.validation.annotation.Validated;
+ import org.springframework.web.bind.annotation.*;
+ 
++import javax.validation.Valid;
+ import javax.validation.constraints.Pattern;
+ import java.util.List;
+ 
+@@ -62,7 +63,7 @@
+       })
+   @PostMapping
+   @ResponseStatus(code = HttpStatus.CREATED)
+-  Order createOrder(@RequestBody OrderRequest orderRequest);
++  Order createOrder(@Valid @RequestBody OrderRequest orderRequest);
+   // @formatter:on
+ 
+ }
+Index: src/main/java/com/jed/jeep/controller/BasicJeepOrderController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.jed.jeep.controller;\n\nimport com.jed.jeep.entity.Order;\nimport com.jed.jeep.entity.OrderRequest;\nimport lombok.extern.slf4j.Slf4j;\nimport org.springframework.web.bind.annotation.RestController;\n\n@RestController @Slf4j\npublic class BasicJeepOrderController implements JeepOrderController{\n    @Override\n    public Order createOrder(OrderRequest orderRequest) {\n        log.debug(\"Order={}\", orderRequest);\n        return null;\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/jed/jeep/controller/BasicJeepOrderController.java b/src/main/java/com/jed/jeep/controller/BasicJeepOrderController.java
+--- a/src/main/java/com/jed/jeep/controller/BasicJeepOrderController.java	
++++ b/src/main/java/com/jed/jeep/controller/BasicJeepOrderController.java	
+@@ -2,14 +2,22 @@
+ 
+ import com.jed.jeep.entity.Order;
+ import com.jed.jeep.entity.OrderRequest;
++//import com.jed.jeep.service.JeepOrderService;
+ import lombok.extern.slf4j.Slf4j;
++import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.web.bind.annotation.RestController;
+ 
+ @RestController @Slf4j
+ public class BasicJeepOrderController implements JeepOrderController{
++
++//    @Autowired
++//    private JeepOrderService jeepOrderService;
++
+     @Override
+     public Order createOrder(OrderRequest orderRequest) {
+         log.debug("Order={}", orderRequest);
+         return null;
++
++//                jeepOrderService.createOrder(orderRequest);
+     }
+ }
+Index: src/main/java/com/jed/jeep/service/DefaultJeepSalesService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.jed.jeep.service;\n\nimport com.jed.jeep.dao.JeepOrderDao;\nimport com.jed.jeep.entity.Jeep;\nimport com.jed.jeep.entity.JeepModel;\nimport io.swagger.v3.oas.annotations.servers.Server;\nimport lombok.extern.slf4j.Slf4j;\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.stereotype.Service;\nimport org.springframework.transaction.annotation.Transactional;\n\nimport java.util.Collection;\nimport java.util.Collections;\nimport java.util.List;\nimport java.util.NoSuchElementException;\n\n@Service\n@Slf4j\npublic class DefaultJeepSalesService implements JeepSalesService {\n  @Autowired private JeepOrderDao jeepOrderDao;\n\n  @Override @Transactional(readOnly = true)\n  public List<Jeep> fetchJeeps(JeepModel model, String trim) {\n    log.info(\"The fetchJeeps method was called with model={}, trim={}\", model, trim);\n\n    List<Jeep> jeeps = jeepOrderDao.fetchJeeps(model, trim);\n\n    if (jeeps.isEmpty()){\n      String msg = String.format(\"No jeeps found with model=%s and trim=%s\", model, trim);\n\n      throw new NoSuchElementException(msg);\n    }\n\n    Collections.sort(jeeps);\n    return jeeps;\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/jed/jeep/service/DefaultJeepSalesService.java b/src/main/java/com/jed/jeep/service/DefaultJeepSalesService.java
+--- a/src/main/java/com/jed/jeep/service/DefaultJeepSalesService.java	
++++ b/src/main/java/com/jed/jeep/service/DefaultJeepSalesService.java	
+@@ -1,6 +1,7 @@
+ package com.jed.jeep.service;
+ 
+-import com.jed.jeep.dao.JeepOrderDao;
++
++import com.jed.jeep.dao1.JeepOrderDao;
+ import com.jed.jeep.entity.Jeep;
+ import com.jed.jeep.entity.JeepModel;
+ import io.swagger.v3.oas.annotations.servers.Server;
+Index: src/main/java/com/jed/jeep/service/DefaultJeepOrderService.source
+===================================================================
+diff --git a/src/main/java/com/jed/jeep/service/DefaultJeepOrderService.source b/src/main/java/com/jed/jeep/service/DefaultJeepOrderService.source
+deleted file mode 100644
+--- a/src/main/java/com/jed/jeep/service/DefaultJeepOrderService.source	
++++ /dev/null	
+@@ -1,67 +0,0 @@
+-/**
+- *
+- * @param orderRequest
+- * @return
+- */
+-private List<Option> getOption(OrderRequest orderRequest) {
+-        return jeepOrderDao.fetchOptions(orderRequest.getOptions());
+-        }
+-
+-/**
+- *
+- * @param orderRequest
+- * @return
+- */
+-protected Tire getTire(OrderRequest orderRequest) {
+-        return jeepOrderDao.fetchTire(orderRequest.getTire())
+-        .orElseThrow(() -> new NoSuchElementException(
+-        "Tire with ID=" + orderRequest.getTire() + " was not found"));
+-        }
+-
+-/**
+- *
+- * @param orderRequest
+- * @return
+- */
+-protected Engine getEngine(OrderRequest orderRequest) {
+-        return jeepOrderDao.fetchEngine(orderRequest.getEngine())
+-        .orElseThrow(() -> new NoSuchElementException(
+-        "Engine with ID=" + orderRequest.getEngine() + " was not found"));
+-        }
+-
+-/**
+- *
+- * @param orderRequest
+- * @return
+- */
+-protected Color getColor(OrderRequest orderRequest) {
+-        return jeepOrderDao.fetchColor(orderRequest.getColor())
+-        .orElseThrow(() -> new NoSuchElementException(
+-        "Color with ID=" + orderRequest.getColor() + " was not found"));
+-        }
+-
+-/**
+- *
+- * @param orderRequest
+- * @return
+- */
+-protected Jeep getModel(OrderRequest orderRequest) {
+-        return jeepOrderDao
+-        .fetchModel(orderRequest.getModel(), orderRequest.getTrim(),
+-        orderRequest.getDoors())
+-        .orElseThrow(() -> new NoSuchElementException("Model with ID="
+-        + orderRequest.getModel() + ", trim=" + orderRequest.getTrim()
+-        + orderRequest.getDoors() + " was not found"));
+-        }
+-
+-/**
+- *
+- * @param orderRequest
+- * @return
+- */
+-protected Customer getCustomer(OrderRequest orderRequest) {
+-        return jeepOrderDao.fetchCustomer(orderRequest.getCustomer())
+-        .orElseThrow(() -> new NoSuchElementException("Customer with ID="
+-        + orderRequest.getCustomer() + " was not found"));
+-        }
+-        © 2021 GitHub, Inc.
+\ No newline at end of file
+Index: src/test/java/com/jed/jeep/controller/CreateOrderTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.jed.jeep.controller;\n\nimport com.jed.jeep.controller.support.CreateOrderTestSupport;\nimport com.jed.jeep.entity.Order;\nimport org.junit.jupiter.api.Test;\nimport org.springframework.boot.test.context.SpringBootTest;\nimport org.springframework.http.*;\nimport org.springframework.test.context.ActiveProfiles;\nimport org.springframework.test.context.jdbc.Sql;\nimport org.springframework.test.context.jdbc.SqlConfig;\n\nimport static org.assertj.core.api.Assertions.assertThat;\n\n@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)\n@ActiveProfiles(\"test\")\n@Sql(\n    scripts = {\n      \"classpath:flyway/migrations/V1.0__Jeep_Schema.sql\",\n      \"classpath:flyway/migrations/V1.1__Jeep_Data.sql\"\n    },\n    config = @SqlConfig(encoding = \"utf-8\"))\nclass CreateOrderTest extends CreateOrderTestSupport {\n\n  //  @Test\n  //  void name() {}\n\n  @Test\n  void testCreateOrderReturnsSuccess201() {\n\n    String body = createOrderBody();\n\n    String uri = getBaseUriForOrders();\n    HttpHeaders headers = new HttpHeaders();\n    headers.setContentType(MediaType.APPLICATION_JSON);\n\n    HttpEntity<String> bodyEntity = new HttpEntity<>(body, headers);\n\n    // when order is sent to\n    ResponseEntity<Order> res =\n        getRestTemplate().exchange(uri, HttpMethod.POST, bodyEntity, Order.class);\n\n    // then a 201 status is returned\n    assertThat(res.getStatusCode()).isEqualTo(HttpStatus.CREATED);\n    // and the returned order is correct\n\n    assertThat(res.getBody()).isNotNull();\n\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/com/jed/jeep/controller/CreateOrderTest.java b/src/test/java/com/jed/jeep/controller/CreateOrderTest.java
+--- a/src/test/java/com/jed/jeep/controller/CreateOrderTest.java	
++++ b/src/test/java/com/jed/jeep/controller/CreateOrderTest.java	
+@@ -1,6 +1,7 @@
+ package com.jed.jeep.controller;
+ 
+ import com.jed.jeep.controller.support.CreateOrderTestSupport;
++import com.jed.jeep.entity.JeepModel;
+ import com.jed.jeep.entity.Order;
+ import org.junit.jupiter.api.Test;
+ import org.springframework.boot.test.context.SpringBootTest;
+@@ -45,5 +46,15 @@
+ 
+     assertThat(res.getBody()).isNotNull();
+ 
++    Order order = res.getBody();
++    assertThat(order.getCustomer().getCustomerId()).isEqualTo("MORISON_LINA");
++    assertThat(order.getModel().getModelId()).isEqualTo(JeepModel.WRANGLER);
++    assertThat(order.getModel().getTrimLevel()).isEqualTo("Sport Altitude");
++    assertThat(order.getModel().getNumDoors()).isEqualTo(4);
++    assertThat(order.getEngine().getEngineId()).isEqualTo("2_0_TURBO");
++    assertThat(order.getTire().getTireId()).isEqualTo("35_TOYO");
++    assertThat(order.getOptions()).hasSize(6);
++
++
+   }
+ }

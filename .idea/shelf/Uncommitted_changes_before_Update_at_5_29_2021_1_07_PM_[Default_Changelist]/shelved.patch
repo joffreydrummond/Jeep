@@ -1,0 +1,291 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97\" name=\"Default Changelist\" comment=\"created BasicJeepOrderController added RestController annotation and sly4j\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/JeepOrderController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/JeepOrderController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/OrderRequest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/OrderRequest.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/CreateOrderTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/CreateOrderTest.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/support/CreateOrderTestSupport.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/support/CreateOrderTestSupport.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/jed/jeep/entity/OrderRequest.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/jed/jeep/entity/OrderRequest.class\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/CreateOrderTest.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/CreateOrderTest.class\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/support/CreateOrderTestSupport.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/support/CreateOrderTestSupport.class\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"AnnotationType\" />\n        <option value=\"Enum\" />\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"HighlightingSettingsPerFile\">\n    <setting file=\"jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.3.5/spring-beans-5.3.5.jar!/org/springframework/beans/factory/annotation/Autowired.class\" root0=\"SKIP_INSPECTION\" />\n  </component>\n  <component name=\"ProjectId\" id=\"1rDEvjqzYV7mCZLV8dGIQR5eqFO\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"flattenPackages\" value=\"true\" />\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n    <option name=\"showMembers\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\n    <property name=\"last_directory_selection\" value=\"$PROJECT_DIR$/src/main/java/com/jed\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\n    <property name=\"project.structure.last.edited\" value=\"Project\" />\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\n    <property name=\"project.structure.side.proportion\" value=\"0.0\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.sourceCode.YAML\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"CreateClassDialog.RecentsKey\">\n      <recent name=\"com.jed.jeep.dao\" />\n      <recent name=\"com.jed.jeep.entities\" />\n      <recent name=\"com.jed.jeep.controller.support\" />\n      <recent name=\"com.jed.jeep\" />\n    </key>\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"C:\\Users\\Joffrey New\\Desktop\\Jeep\\src\\test\\resources\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"C:\\Users\\Joffrey New\\Desktop\\Jeep\\src\\main\\java\\com\\jed\\jeep\\service\" />\n      <recent name=\"C:\\Users\\Joffrey New\\Desktop\\Promineo Tech - 2021\\Week13\\Code\\src\\main\\java\\com\\jed\\jeep\\dao\" />\n      <recent name=\"C:\\Users\\Joffrey New\\Desktop\\Promineo Tech - 2021\\Week13\\Code\\src\\main\\java\\com\\jed\\jeep\\entities\" />\n      <recent name=\"C:\\Users\\Joffrey New\\Desktop\\Promineo Tech - 2021\\Week13\\Code\\src\\test\" />\n      <recent name=\"C:\\Users\\Joffrey New\\Desktop\\Promineo Tech - 2021\\Week13\\Code\" />\n    </key>\n    <key name=\"IntroduceConstantDialog.RECENTS_KEY\">\n      <recent name=\"com.jed.jeep.controller.JeepSalesController\" />\n    </key>\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\n      <recent name=\"com.jed.jeep.controller\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"JUnit.CreateOrderTest\">\n    <configuration name=\"CreateOrderTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"Jeep\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.jed.jeep.controller.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"com.jed.jeep.controller\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.jed.jeep.controller.CreateOrderTest\" />\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"FetchJeepTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"Jeep\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.jed.jeep.controller.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"com.jed.jeep.controller\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.jed.jeep.controller.FetchJeepTest\" />\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"FetchJeepTest.testThatAnErrorMessageIsReturnedWhenAInvalidTrimIsSupplied\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"Jeep\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.jed.jeep.controller.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"com.jed.jeep.controller\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.jed.jeep.controller.FetchJeepTest\" />\n      <option name=\"METHOD_NAME\" value=\"testThatAnErrorMessageIsReturnedWhenAInvalidTrimIsSupplied\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"FetchJeepTest.testThatAnErrorMessageIsReturnedWhenAnInvalidValueIsSupplied\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"Jeep\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.jed.jeep.controller.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"com.jed.jeep.controller\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.jed.jeep.controller.FetchJeepTest\" />\n      <option name=\"METHOD_NAME\" value=\"testThatAnErrorMessageIsReturnedWhenAnInvalidValueIsSupplied(java.lang.String,java.lang.String,java.lang.String)\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"FetchJeepTest.testThatAnErrorMessageIsReturnedWhenAnUnknownTrimIsSupplied\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"Jeep\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.jed.jeep.controller.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"com.jed.jeep.controller\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.jed.jeep.controller.FetchJeepTest\" />\n      <option name=\"METHOD_NAME\" value=\"testThatAnErrorMessageIsReturnedWhenAnUnknownTrimIsSupplied\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"JUnit.CreateOrderTest\" />\n        <item itemvalue=\"JUnit.FetchJeepTest\" />\n        <item itemvalue=\"JUnit.FetchJeepTest.testThatAnErrorMessageIsReturnedWhenAnUnknownTrimIsSupplied\" />\n        <item itemvalue=\"JUnit.FetchJeepTest.testThatAnErrorMessageIsReturnedWhenAnInvalidValueIsSupplied\" />\n        <item itemvalue=\"JUnit.FetchJeepTest.testThatAnErrorMessageIsReturnedWhenAInvalidTrimIsSupplied\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97\" name=\"Default Changelist\" comment=\"\" />\n      <created>1618502493173</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1618502493173</updated>\n    </task>\n    <task id=\"LOCAL-00021\" summary=\"getbaseuri string format working. failed\">\n      <created>1618682367025</created>\n      <option name=\"number\" value=\"00021\" />\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618682367025</updated>\n    </task>\n    <task id=\"LOCAL-00022\" summary=\"added defaultjavasalescontroller. failed\">\n      <created>1618682529870</created>\n      <option name=\"number\" value=\"00022\" />\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618682529870</updated>\n    </task>\n    <task id=\"LOCAL-00023\" summary=\"added assert that. imported static method that checks res status\">\n      <created>1618682925672</created>\n      <option name=\"number\" value=\"00023\" />\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618682925672</updated>\n    </task>\n    <task id=\"LOCAL-00024\" summary=\"openapi JeepSales working. displaying correctly. passed\">\n      <created>1618685113923</created>\n      <option name=\"number\" value=\"00024\" />\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618685113923</updated>\n    </task>\n    <task id=\"LOCAL-00025\" summary=\"added slf4j annotation\">\n      <created>1618686015438</created>\n      <option name=\"number\" value=\"00025\" />\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618686015438</updated>\n    </task>\n    <task id=\"LOCAL-00026\" summary=\"added log.info in defaultjeepsalescontroller\">\n      <created>1618686096730</created>\n      <option name=\"number\" value=\"00026\" />\n      <option name=\"presentableId\" value=\"LOCAL-00026\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618686096730</updated>\n    </task>\n    <task id=\"LOCAL-00027\" summary=\"tested jeepsales fetchjeep method model &amp; trim. working\">\n      <created>1618686271838</created>\n      <option name=\"number\" value=\"00027\" />\n      <option name=\"presentableId\" value=\"LOCAL-00027\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618686271838</updated>\n    </task>\n    <task id=\"LOCAL-00028\" summary=\"add scanbasepackages to JeepSales class\">\n      <created>1618691286391</created>\n      <option name=\"number\" value=\"00028\" />\n      <option name=\"presentableId\" value=\"LOCAL-00028\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618691286391</updated>\n    </task>\n    <task id=\"LOCAL-00029\" summary=\"fixed basetest, fetchjeeptest pass\">\n      <created>1618800388548</created>\n      <option name=\"number\" value=\"00029\" />\n      <option name=\"presentableId\" value=\"LOCAL-00029\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618800388548</updated>\n    </task>\n    <task id=\"LOCAL-00030\" summary=\"added application.yaml file\">\n      <created>1618801796094</created>\n      <option name=\"number\" value=\"00030\" />\n      <option name=\"presentableId\" value=\"LOCAL-00030\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618801796094</updated>\n    </task>\n    <task id=\"LOCAL-00031\" summary=\"added application-test.yaml file to test resources\">\n      <created>1618801905574</created>\n      <option name=\"number\" value=\"00031\" />\n      <option name=\"presentableId\" value=\"LOCAL-00031\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618801905574</updated>\n    </task>\n    <task id=\"LOCAL-00032\" summary=\"create buildexpected method\">\n      <created>1618804518941</created>\n      <option name=\"number\" value=\"00032\" />\n      <option name=\"presentableId\" value=\"LOCAL-00032\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618804518941</updated>\n    </task>\n    <task id=\"LOCAL-00033\" summary=\"added noargs and all args annotation to Jeep class\">\n      <created>1618805093956</created>\n      <option name=\"number\" value=\"00033\" />\n      <option name=\"presentableId\" value=\"LOCAL-00033\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618805093956</updated>\n    </task>\n    <task id=\"LOCAL-00034\" summary=\"created link list. added jeep variables to list in buildexpected\">\n      <created>1618805471254</created>\n      <option name=\"number\" value=\"00034\" />\n      <option name=\"presentableId\" value=\"LOCAL-00034\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618805471254</updated>\n    </task>\n    <task id=\"LOCAL-00035\" summary=\"ran fetchjeeptest. failed\">\n      <created>1618805961430</created>\n      <option name=\"number\" value=\"00035\" />\n      <option name=\"presentableId\" value=\"LOCAL-00035\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618805961430</updated>\n    </task>\n    <task id=\"LOCAL-00036\" summary=\"ran fetchjeeptest. created two jeep wranglers in list failed\">\n      <created>1618805995541</created>\n      <option name=\"number\" value=\"00036\" />\n      <option name=\"presentableId\" value=\"LOCAL-00036\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618805995541</updated>\n    </task>\n    <task id=\"LOCAL-00037\" summary=\"sout expected\">\n      <created>1618806941140</created>\n      <option name=\"number\" value=\"00037\" />\n      <option name=\"presentableId\" value=\"LOCAL-00037\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618806941140</updated>\n    </task>\n    <task id=\"LOCAL-00038\" summary=\"created jeelsaleservice interface\">\n      <created>1618808649307</created>\n      <option name=\"number\" value=\"00038\" />\n      <option name=\"presentableId\" value=\"LOCAL-00038\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618808649307</updated>\n    </task>\n    <task id=\"LOCAL-00039\" summary=\"created defaultjeepsaleservice class\">\n      <created>1618808852907</created>\n      <option name=\"number\" value=\"00039\" />\n      <option name=\"presentableId\" value=\"LOCAL-00039\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618808852908</updated>\n    </task>\n    <task id=\"LOCAL-00040\" summary=\"created defaultjeepsaleservice class\">\n      <created>1618808861787</created>\n      <option name=\"number\" value=\"00040\" />\n      <option name=\"presentableId\" value=\"LOCAL-00040\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618808861787</updated>\n    </task>\n    <task id=\"LOCAL-00041\" summary=\"added service annotation to DefaultJeepSalesService\">\n      <created>1618808990296</created>\n      <option name=\"number\" value=\"00041\" />\n      <option name=\"presentableId\" value=\"LOCAL-00041\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618808990296</updated>\n    </task>\n    <task id=\"LOCAL-00042\" summary=\"added dependencies to database. mysql and jdbc. failed\">\n      <created>1618810319387</created>\n      <option name=\"number\" value=\"00042\" />\n      <option name=\"presentableId\" value=\"LOCAL-00042\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618810319387</updated>\n    </task>\n    <task id=\"LOCAL-00043\" summary=\"added connection to db using application.yaml file. passed\">\n      <created>1618810608439</created>\n      <option name=\"number\" value=\"00043\" />\n      <option name=\"presentableId\" value=\"LOCAL-00043\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618810608439</updated>\n    </task>\n    <task id=\"LOCAL-00044\" summary=\"added h2 dependency\">\n      <created>1618812330905</created>\n      <option name=\"number\" value=\"00044\" />\n      <option name=\"presentableId\" value=\"LOCAL-00044\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618812330905</updated>\n    </task>\n    <task id=\"LOCAL-00045\" summary=\"edited application-test.yaml to point to h2 database\">\n      <created>1618812452567</created>\n      <option name=\"number\" value=\"00045\" />\n      <option name=\"presentableId\" value=\"LOCAL-00045\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618812452567</updated>\n    </task>\n    <task id=\"LOCAL-00046\" summary=\"added sql script annotation to FetchJeepTest\">\n      <created>1618812629910</created>\n      <option name=\"number\" value=\"00046\" />\n      <option name=\"presentableId\" value=\"LOCAL-00046\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618812629910</updated>\n    </task>\n    <task id=\"LOCAL-00047\" summary=\"added sql script config annotation to FetchJeepTest\">\n      <created>1618812690722</created>\n      <option name=\"number\" value=\"00047\" />\n      <option name=\"presentableId\" value=\"LOCAL-00047\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618812690723</updated>\n    </task>\n    <task id=\"LOCAL-00048\" summary=\"added testdb method. pass\">\n      <created>1618812788474</created>\n      <option name=\"number\" value=\"00048\" />\n      <option name=\"presentableId\" value=\"LOCAL-00048\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618812788474</updated>\n    </task>\n    <task id=\"LOCAL-00049\" summary=\"ran testdb method to see if rows were being queried from db. pass\">\n      <created>1618812980519</created>\n      <option name=\"number\" value=\"00049\" />\n      <option name=\"presentableId\" value=\"LOCAL-00049\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1618812980519</updated>\n    </task>\n    <task id=\"LOCAL-00050\" summary=\"created new JeepOrderDao because package was not being found by springboot. queried sql for jeep specs. fail assertion\">\n      <created>1620189461766</created>\n      <option name=\"number\" value=\"00050\" />\n      <option name=\"presentableId\" value=\"LOCAL-00050\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1620189461766</updated>\n    </task>\n    <task id=\"LOCAL-00051\" summary=\"fixed null value exception in modelpk. pass\">\n      <created>1620189623467</created>\n      <option name=\"number\" value=\"00051\" />\n      <option name=\"presentableId\" value=\"LOCAL-00051\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1620189623468</updated>\n    </task>\n    <task id=\"LOCAL-00052\" summary=\"jsonignore to ignore primary key\">\n      <created>1620189789597</created>\n      <option name=\"number\" value=\"00052\" />\n      <option name=\"presentableId\" value=\"LOCAL-00052\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1620189789597</updated>\n    </task>\n    <task id=\"LOCAL-00053\" summary=\"added comparator to expected and actual responses. modelid, trimlevel, numdoors\">\n      <created>1620190330278</created>\n      <option name=\"number\" value=\"00053\" />\n      <option name=\"presentableId\" value=\"LOCAL-00053\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1620190330278</updated>\n    </task>\n    <task id=\"LOCAL-00054\" summary=\"created 404 method. failed\">\n      <created>1620190823913</created>\n      <option name=\"number\" value=\"00054\" />\n      <option name=\"presentableId\" value=\"LOCAL-00054\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1620190823913</updated>\n    </task>\n    <task id=\"LOCAL-00055\" summary=\"500 internal server error. fail\">\n      <created>1620191257841</created>\n      <option name=\"number\" value=\"00055\" />\n      <option name=\"presentableId\" value=\"LOCAL-00055\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1620191257841</updated>\n    </task>\n    <task id=\"LOCAL-00056\" summary=\"created handler method for nosuchelementexception. pass\">\n      <created>1620192745123</created>\n      <option name=\"number\" value=\"00056\" />\n      <option name=\"presentableId\" value=\"LOCAL-00056\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1620192745123</updated>\n    </task>\n    <task id=\"LOCAL-00057\" summary=\"added bean validator\">\n      <created>1620195812286</created>\n      <option name=\"number\" value=\"00057\" />\n      <option name=\"presentableId\" value=\"LOCAL-00057\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1620195812286</updated>\n    </task>\n    <task id=\"LOCAL-00058\" summary=\"bad request ConstraintViolationException added. pass\">\n      <created>1620196775488</created>\n      <option name=\"number\" value=\"00058\" />\n      <option name=\"presentableId\" value=\"LOCAL-00058\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1620196775488</updated>\n    </task>\n    <task id=\"LOCAL-00059\" summary=\"INTERNAL_SERVER_ERROR exception created\">\n      <created>1620196917948</created>\n      <option name=\"number\" value=\"00059\" />\n      <option name=\"presentableId\" value=\"LOCAL-00059\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1620196917948</updated>\n    </task>\n    <task id=\"LOCAL-00060\" summary=\"exception handlers working. pass\">\n      <created>1620197285086</created>\n      <option name=\"number\" value=\"00060\" />\n      <option name=\"presentableId\" value=\"LOCAL-00060\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1620197285086</updated>\n    </task>\n    <task id=\"LOCAL-00061\" summary=\"created handleMethodArgumentTypeMismatchException. pass fail\">\n      <created>1620198236252</created>\n      <option name=\"number\" value=\"00061\" />\n      <option name=\"presentableId\" value=\"LOCAL-00061\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1620198236252</updated>\n    </task>\n    <task id=\"LOCAL-00062\" summary=\"created handleMethodArgumentTypeMismatchException. created runtimeexception this hurts my soul. pass\">\n      <created>1620200282295</created>\n      <option name=\"number\" value=\"00062\" />\n      <option name=\"presentableId\" value=\"LOCAL-00062\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1620200282295</updated>\n    </task>\n    <task id=\"LOCAL-00063\" summary=\"created CreateOrderTest.java\">\n      <created>1622174706162</created>\n      <option name=\"number\" value=\"00063\" />\n      <option name=\"presentableId\" value=\"LOCAL-00063\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1622174706162</updated>\n    </task>\n    <task id=\"LOCAL-00064\" summary=\"added annotations needed sql, activeprofiles, springboottest\">\n      <created>1622174800831</created>\n      <option name=\"number\" value=\"00064\" />\n      <option name=\"presentableId\" value=\"LOCAL-00064\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1622174800831</updated>\n    </task>\n    <task id=\"LOCAL-00065\" summary=\"added json to CreateOrderTest\">\n      <created>1622229601964</created>\n      <option name=\"number\" value=\"00065\" />\n      <option name=\"presentableId\" value=\"LOCAL-00065\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1622229601964</updated>\n    </task>\n    <task id=\"LOCAL-00066\" summary=\"added getBaseUriForOrders method to basetest class\">\n      <created>1622229987159</created>\n      <option name=\"number\" value=\"00066\" />\n      <option name=\"presentableId\" value=\"LOCAL-00066\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1622229987159</updated>\n    </task>\n    <task id=\"LOCAL-00067\" summary=\"added assert to check if order is created\">\n      <created>1622230313435</created>\n      <option name=\"number\" value=\"00067\" />\n      <option name=\"presentableId\" value=\"LOCAL-00067\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1622230313435</updated>\n    </task>\n    <task id=\"LOCAL-00068\" summary=\"added new controller def to JeepOrderController\">\n      <created>1622231066470</created>\n      <option name=\"number\" value=\"00068\" />\n      <option name=\"presentableId\" value=\"LOCAL-00068\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1622231066470</updated>\n    </task>\n    <task id=\"LOCAL-00069\" summary=\"created BasicJeepOrderController added RestController annotation and sly4j\">\n      <created>1622231394359</created>\n      <option name=\"number\" value=\"00069\" />\n      <option name=\"presentableId\" value=\"LOCAL-00069\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1622231394359</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"70\" />\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"edited application-test.yaml to point to h2 database\" />\n    <MESSAGE value=\"added sql script annotation to FetchJeepTest\" />\n    <MESSAGE value=\"added sql script config annotation to FetchJeepTest\" />\n    <MESSAGE value=\"added testdb method. pass\" />\n    <MESSAGE value=\"ran testdb method to see if rows were being queried from db. pass\" />\n    <MESSAGE value=\"created new JeepOrderDao because package was not being found by springboot. queried sql for jeep specs. fail assertion\" />\n    <MESSAGE value=\"fixed null value exception in modelpk. pass\" />\n    <MESSAGE value=\"jsonignore to ignore primary key\" />\n    <MESSAGE value=\"added comparator to expected and actual responses. modelid, trimlevel, numdoors\" />\n    <MESSAGE value=\"created 404 method. failed\" />\n    <MESSAGE value=\"500 internal server error. fail\" />\n    <MESSAGE value=\"created handler method for nosuchelementexception. pass\" />\n    <MESSAGE value=\"added bean validator\" />\n    <MESSAGE value=\"bad request ConstraintViolationException added. pass\" />\n    <MESSAGE value=\"INTERNAL_SERVER_ERROR exception created\" />\n    <MESSAGE value=\"exception handlers working. pass\" />\n    <MESSAGE value=\"created handleMethodArgumentTypeMismatchException. pass fail\" />\n    <MESSAGE value=\"created handleMethodArgumentTypeMismatchException. created runtimeexception this hurts my soul. pass\" />\n    <MESSAGE value=\"created CreateOrderTest.java\" />\n    <MESSAGE value=\"added annotations needed sql, activeprofiles, springboottest\" />\n    <MESSAGE value=\"added json to CreateOrderTest\" />\n    <MESSAGE value=\"added getBaseUriForOrders method to basetest class\" />\n    <MESSAGE value=\"added assert to check if order is created\" />\n    <MESSAGE value=\"added new controller def to JeepOrderController\" />\n    <MESSAGE value=\"created BasicJeepOrderController added RestController annotation and sly4j\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"created BasicJeepOrderController added RestController annotation and sly4j\" />\n  </component>\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\n    <expand />\n    <select />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,15 +4,23 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="created BasicJeepOrderController added RestController annotation and sly4j">
++    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="added validation annotations">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/BasicJeepOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/BasicJeepOrderController.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/JeepOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/JeepOrderController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/dao/DefaultJeepOrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/dao/DefaultJeepOrderDao.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/dao/JeepOrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/dao/JeepOrderDao.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/dao1/DefaultJeepOrderDao11.source" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/dao1/DefaultJeepOrderDao11.source" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/dao1/JeepOrderDao1.source" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/dao1/JeepOrderDao1.source" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/OrderRequest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/service/DefaultJeepOrderService.source" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/service/DefaultJeepSalesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/service/DefaultJeepSalesService.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/CreateOrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/CreateOrderTest.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/support/CreateOrderTestSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/support/CreateOrderTestSupport.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/OrderRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/OrderRequest.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/CreateOrderTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/CreateOrderTest.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/support/CreateOrderTestSupport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/support/CreateOrderTestSupport.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/dao/DefaultJeepOrderDao$1.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/dao/DefaultJeepOrderDao.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/dao/JeepOrderDao.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/OrderRequest.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/service/DefaultJeepSalesService.class" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -56,6 +64,7 @@
+   </component>
+   <component name="RecentsManager">
+     <key name="CreateClassDialog.RecentsKey">
++      <recent name="com.jed.jeep.service" />
+       <recent name="com.jed.jeep.dao" />
+       <recent name="com.jed.jeep.entities" />
+       <recent name="com.jed.jeep.controller.support" />
+@@ -175,20 +184,6 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1618502493173</updated>
+-    </task>
+-    <task id="LOCAL-00021" summary="getbaseuri string format working. failed">
+-      <created>1618682367025</created>
+-      <option name="number" value="00021" />
+-      <option name="presentableId" value="LOCAL-00021" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1618682367025</updated>
+-    </task>
+-    <task id="LOCAL-00022" summary="added defaultjavasalescontroller. failed">
+-      <created>1618682529870</created>
+-      <option name="number" value="00022" />
+-      <option name="presentableId" value="LOCAL-00022" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1618682529870</updated>
+     </task>
+     <task id="LOCAL-00023" summary="added assert that. imported static method that checks res status">
+       <created>1618682925672</created>
+@@ -519,7 +514,21 @@
+       <option name="project" value="LOCAL" />
+       <updated>1622231394359</updated>
+     </task>
+-    <option name="localTasksCounter" value="70" />
++    <task id="LOCAL-00070" summary="added assertThat(res.getBody()).isNotNull();">
++      <created>1622315594895</created>
++      <option name="number" value="00070" />
++      <option name="presentableId" value="LOCAL-00070" />
++      <option name="project" value="LOCAL" />
++      <updated>1622315594895</updated>
++    </task>
++    <task id="LOCAL-00071" summary="added validation annotations">
++      <created>1622316228246</created>
++      <option name="number" value="00071" />
++      <option name="presentableId" value="LOCAL-00071" />
++      <option name="project" value="LOCAL" />
++      <updated>1622316228246</updated>
++    </task>
++    <option name="localTasksCounter" value="72" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -535,8 +544,6 @@
+     <option name="oldMeFiltersMigrated" value="true" />
+   </component>
+   <component name="VcsManagerConfiguration">
+-    <MESSAGE value="edited application-test.yaml to point to h2 database" />
+-    <MESSAGE value="added sql script annotation to FetchJeepTest" />
+     <MESSAGE value="added sql script config annotation to FetchJeepTest" />
+     <MESSAGE value="added testdb method. pass" />
+     <MESSAGE value="ran testdb method to see if rows were being queried from db. pass" />
+@@ -560,7 +567,9 @@
+     <MESSAGE value="added assert to check if order is created" />
+     <MESSAGE value="added new controller def to JeepOrderController" />
+     <MESSAGE value="created BasicJeepOrderController added RestController annotation and sly4j" />
+-    <option name="LAST_COMMIT_MESSAGE" value="created BasicJeepOrderController added RestController annotation and sly4j" />
++    <MESSAGE value="added assertThat(res.getBody()).isNotNull();" />
++    <MESSAGE value="added validation annotations" />
++    <option name="LAST_COMMIT_MESSAGE" value="added validation annotations" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
+Index: src/main/java/com/jed/jeep/dao/JeepOrderDao.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.jed.jeep.dao;\n\nimport com.jed.jeep.entity.Jeep;\nimport com.jed.jeep.entity.JeepModel;\n\nimport java.util.List;\n\npublic interface JeepOrderDao {\n    List<Jeep> fetchJeeps(JeepModel model, String trim);\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/jed/jeep/dao/JeepOrderDao.java b/src/main/java/com/jed/jeep/dao/JeepOrderDao.java
+--- a/src/main/java/com/jed/jeep/dao/JeepOrderDao.java	
++++ b/src/main/java/com/jed/jeep/dao/JeepOrderDao.java	
+@@ -1,10 +1,17 @@
+-package com.jed.jeep.dao;
+-
+-import com.jed.jeep.entity.Jeep;
+-import com.jed.jeep.entity.JeepModel;
+-
+-import java.util.List;
+-
+-public interface JeepOrderDao {
+-    List<Jeep> fetchJeeps(JeepModel model, String trim);
+-}
++//package com.jed.jeep.dao;
++//
++//import com.jed.jeep.entity.*;
++//
++//import java.util.List;
++//import java.util.Optional;
++//
++//public interface JeepOrderDao {
++//    List<Option> fetchOptions(List<String> optionIds);
++//    Optional<Customer> fetchCustomer(String customerId);
++//    Optional<Jeep> fetchModel(JeepModel model, String trim, int doors);
++//    Optional<Color> fetchColor(String colorId);
++//    Optional<Engine> fetchEngine(String engineId);
++//    Optional<Tire> fetchTire(String tireId);
++//
++//    Order createOrder(OrderRequest orderRequest);
++//}
+Index: src/main/java/com/jed/jeep/dao1/DefaultJeepOrderDao11.source
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.jed.jeep.dao1;\n\nimport com.jed.jeep.entity.*;\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.jdbc.core.ResultSetExtractor;\nimport org.springframework.jdbc.core.RowMapper;\nimport org.springframework.jdbc.core.namedparam.MapSqlParameterSource;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\nimport org.springframework.stereotype.Component;\n\nimport java.math.BigDecimal;\nimport java.sql.ResultSet;\nimport java.sql.SQLException;\nimport java.util.*;\n\n@Component\npublic class DefaultJeepOrderDao11 implements JeepOrderDao1 {\n\n  @Autowired\n  private NamedParameterJdbcTemplate jdbcTemplate;\n\n  /**\n   *\n   * @param option\n   * @param orderPK\n   * @return\n   */\n  private SqlParams generateInsertSql(Option option, Long orderPK) {\n    SqlParams params = new SqlParams();\n\n    // @formatter:off\n    params.sql = \"\"\n            + \"INSERT INTO order_options (\"\n            + \"option_fk, order_fk\"\n            + \") VALUES (\"\n            + \":option_fk, :order_fk\"\n            + \")\";\n    // @formatter:on\n\n    params.source.addValue(\"option_fk\", option.getOptionPK());\n    params.source.addValue(\"order_fk\", orderPK);\n\n    return params;\n  }\n\n  /**\n   *\n   * @param customer\n   * @param jeep\n   * @param color\n   * @param engine\n   * @param tire\n   * @param price\n   * @return\n   */\n  private SqlParams generateInsertSql(Customer customer, Jeep jeep, Color color,\n                                      Engine engine, Tire tire, BigDecimal price) {\n    // @formatter:off\n    String sql = \"\"\n            + \"INSERT INTO orders (\"\n            + \"customer_fk, color_fk, engine_fk, tire_fk, model_fk, price\"\n            + \") VALUES (\"\n            + \":customer_fk, :color_fk, :engine_fk, :tire_fk, :model_fk, :price\"\n            + \")\";\n    // @formatter:on\n\n    SqlParams params = new SqlParams();\n\n    params.sql = sql;\n    params.source.addValue(\"customer_fk\", customer.getCustomerPK());\n    params.source.addValue(\"color_fk\", color.getColorPK());\n    params.source.addValue(\"engine_fk\", engine.getEnginePK());\n    params.source.addValue(\"tire_fk\", tire.getTirePK());\n    params.source.addValue(\"model_fk\", jeep.getModelPK());\n    params.source.addValue(\"price\", price);\n\n    return params;\n  }\n\n  /**\n   *\n   */\n  @Override\n  public List<Option> fetchOptions(List<String> optionIds) {\n    if (optionIds.isEmpty()) {\n      return new LinkedList<>();\n    }\n\n    Map<String, Object> params = new HashMap<>();\n\n    // @formatter:off\n    String sql = \"\"\n            + \"SELECT * \"\n            + \"FROM options \"\n            + \"WHERE option_id IN(\";\n    // @formatter:on\n\n    for (int index = 0; index < optionIds.size(); index++) {\n      String key = \"option_\" + index;\n      sql += \":\" + key + \", \";\n      params.put(key, optionIds.get(index));\n    }\n\n    sql = sql.substring(0, sql.length() - 2);\n    sql += \")\";\n\n    return jdbcTemplate.query(sql, params, new RowMapper<Option>() {\n      @Override\n      public Option mapRow(ResultSet rs, int rowNum) throws SQLException {\n        // @formatter:off\n        return Option.builder()\n                .category(OptionType.valueOf(rs.getString(\"category\")))\n                .manufacturer(rs.getString(\"manufacturer\"))\n                .name(rs.getString(\"name\"))\n                .optionId(rs.getString(\"option_id\"))\n                .optionPK(rs.getLong(\"option_pk\"))\n                .price(rs.getBigDecimal(\"price\"))\n                .build();\n        // @formatter:on\n      }\n    });\n  }\n\n  /**\n   *\n   */\n  @Override\n  public Optional<Customer> fetchCustomer(String customerId) {\n    // @formatter:off\n    String sql = \"\"\n            + \"SELECT * \"\n            + \"FROM customers \"\n            + \"WHERE customer_id = :customer_id\";\n    // @formatter:on\n\n    Map<String, Object> params = new HashMap<>();\n    params.put(\"customer_id\", customerId);\n\n    return Optional.ofNullable(\n            jdbcTemplate.query(sql, params, new CustomerResultSetExtractor()));\n  }\n\n  /**\n   *\n   */\n  @Override\n  public Optional<Jeep> fetchModel(JeepModel model, String trim, int doors) {\n    // @formatter:off\n    String sql = \"\"\n            + \"SELECT * \"\n            + \"FROM models \"\n            + \"WHERE model_id = :model_id \"\n            + \"AND trim_level = :trim_level \"\n            + \"AND num_doors = :num_doors\";\n    // @formatter:on\n\n    Map<String, Object> params = new HashMap<>();\n    params.put(\"model_id\", model.toString());\n    params.put(\"trim_level\", trim);\n    params.put(\"num_doors\", doors);\n\n    return Optional.ofNullable(\n            jdbcTemplate.query(sql, params, new ModelResultSetExtractor()));\n  }\n\n  /**\n   *\n   */\n  @Override\n  public Optional<Color> fetchColor(String colorId) {\n    // @formatter:off\n    String sql = \"\"\n            + \"SELECT * \"\n            + \"FROM colors \"\n            + \"WHERE color_id = :color_id\";\n    // @formatter:on\n\n    Map<String, Object> params = new HashMap<>();\n    params.put(\"color_id\", colorId);\n\n    return Optional.ofNullable(\n            jdbcTemplate.query(sql, params, new ColorResultSetExtractor()));\n  }\n\n  /**\n   *\n   */\n  @Override\n  public Optional<Engine> fetchEngine(String engineId) {\n    // @formatter:off\n    String sql = \"\"\n            + \"SELECT * \"\n            + \"FROM engines \"\n            + \"WHERE engine_id = :engine_id\";\n    // @formatter:on\n\n    Map<String, Object> params = new HashMap<>();\n    params.put(\"engine_id\", engineId);\n\n    return Optional.ofNullable(\n            jdbcTemplate.query(sql, params, new EngineResultSetExtractor()));\n  }\n\n  /**\n   *\n   */\n  @Override\n  public Optional<Tire> fetchTire(String tireId) {\n    // @formatter:off\n    String sql = \"\"\n            + \"SELECT * \"\n            + \"FROM tires \"\n            + \"WHERE tire_id = :tire_id\";\n    // @formatter:on\n\n    Map<String, Object> params = new HashMap<>();\n    params.put(\"tire_id\", tireId);\n\n    return Optional.ofNullable(\n            jdbcTemplate.query(sql, params, new TireResultSetExtractor()));\n  }\n\n  /**\n   *\n   * @author Promineo\n   *\n   */\n  class TireResultSetExtractor implements ResultSetExtractor<Tire> {\n    @Override\n    public Tire extractData(ResultSet rs) throws SQLException {\n      rs.next();\n\n      // @formatter:off\n      return Tire.builder()\n              .manufacturer(rs.getString(\"manufacturer\"))\n              .price(rs.getBigDecimal(\"price\"))\n              .tireId(rs.getString(\"tire_id\"))\n              .tirePK(rs.getLong(\"tire_pk\"))\n              .tireSize(rs.getString(\"tire_size\"))\n              .warrantyMiles(rs.getInt(\"warranty_miles\"))\n              .build();\n      // @formatter:on\n    }\n  }\n\n  /**\n   *\n   * @author Promineo\n   *\n   */\n  class EngineResultSetExtractor implements ResultSetExtractor<Engine> {\n    @Override\n    public Engine extractData(ResultSet rs) throws SQLException {\n      rs.next();\n\n      // @formatter:off\n      return Engine.builder()\n              .description(rs.getString(\"description\"))\n              .engineId(rs.getString(\"engine_id\"))\n              .enginePK(rs.getLong(\"engine_pk\"))\n              .fuelType(FuelType.valueOf(rs.getString(\"fuel_type\")))\n              .hasStartStop(rs.getBoolean(\"has_start_stop\"))\n              .mpgCity(rs.getFloat(\"mpg_city\"))\n              .mpgHwy(rs.getFloat(\"mpg_hwy\"))\n              .name(rs.getString(\"name\"))\n              .price(rs.getBigDecimal(\"price\"))\n              .sizeInLiters(rs.getFloat(\"size_in_liters\"))\n              .build();\n      // @formatter:on\n    }\n  }\n\n  /**\n   *\n   * @author Promineo\n   *\n   */\n  class ColorResultSetExtractor implements ResultSetExtractor<Color> {\n    @Override\n    public Color extractData(ResultSet rs) throws SQLException {\n      rs.next();\n\n      // @formatter:off\n      return Color.builder()\n              .color(rs.getString(\"color\"))\n              .colorId(rs.getString(\"color_id\"))\n              .colorPK(rs.getLong(\"color_pk\"))\n              .isExterior(rs.getBoolean(\"is_exterior\"))\n              .price(rs.getBigDecimal(\"price\"))\n              .build();\n      // @formatter:on\n    }\n  }\n\n  /**\n   *\n   * @author Promineo\n   *\n   */\n  class ModelResultSetExtractor implements ResultSetExtractor<Jeep> {\n    @Override\n    public Jeep extractData(ResultSet rs) throws SQLException {\n      rs.next();\n\n      // @formatter:off\n      return Jeep.builder()\n              .basePrice(rs.getBigDecimal(\"base_price\"))\n              .modelId(JeepModel.valueOf(rs.getString(\"model_id\")))\n              .modelPK((long) rs.getInt(\"model_pk\"))\n              .numDoors(rs.getInt(\"num_doors\"))\n              .trimLevel(rs.getString(\"trim_level\"))\n              .wheelSize(rs.getInt(\"wheel_size\"))\n              .build();\n      // @formatter:on\n    }\n  }\n\n  /**\n   *\n   * @author Promineo\n   *\n   */\n  class CustomerResultSetExtractor implements ResultSetExtractor<Customer> {\n    @Override\n    public Customer extractData(ResultSet rs) throws SQLException {\n      rs.next();\n\n      // @formatter:off\n      return Customer.builder()\n              .customerId(rs.getString(\"customer_id\"))\n              .customerPK(rs.getLong(\"customer_pk\"))\n              .firstName(rs.getString(\"first_name\"))\n              .lastName(rs.getString(\"last_name\"))\n              .phone(rs.getString(\"phone\"))\n              .build();\n      // @formatter:on\n\n    }\n  }\n\n  class SqlParams {\n    String sql;\n    MapSqlParameterSource source = new MapSqlParameterSource();\n  }\n  }\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/jed/jeep/dao1/DefaultJeepOrderDao11.source b/src/main/java/com/jed/jeep/dao1/DefaultJeepOrderDao11.source
+--- a/src/main/java/com/jed/jeep/dao1/DefaultJeepOrderDao11.source	
++++ b/src/main/java/com/jed/jeep/dao1/DefaultJeepOrderDao11.source	
+@@ -220,6 +220,16 @@
+             jdbcTemplate.query(sql, params, new TireResultSetExtractor()));
+   }
+ 
++  @Override
++  public Order createOrder(OrderRequest orderRequest) {
++    return null;
++  }
++
++  @Override
++  public List<Jeep> fetchJeeps(JeepModel model, String trim) {
++    return null;
++  }
++
+   /**
+    *
+    * @author Promineo
+Index: src/main/java/com/jed/jeep/dao/DefaultJeepOrderDao.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.jed.jeep.dao;\n\nimport com.jed.jeep.entity.Jeep;\nimport com.jed.jeep.entity.JeepModel;\nimport lombok.extern.slf4j.Slf4j;\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.jdbc.core.RowMapper;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\nimport org.springframework.stereotype.Component;\n\nimport javax.sql.DataSource;\nimport java.math.BigDecimal;\nimport java.sql.ResultSet;\nimport java.sql.SQLException;\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\n@Slf4j\n@Component\npublic class DefaultJeepOrderDao implements JeepOrderDao {\n\n  @Autowired private NamedParameterJdbcTemplate jdbcTemplate;\n\n  @Override\n  public List<Jeep> fetchJeeps(JeepModel model, String trim) {\n    log.debug(\"DAO: model={}, trim={}\", model, trim);\n\n    String sql = \"SELECT * FROM models WHERE model_id = :model_id AND trim_level= :trim_level\";\n\n    Map<String, Object> params = new HashMap<>();\n    params.put(\"model_id\", model.toString());\n    params.put(\"trim_level\", trim);\n\n    return jdbcTemplate.query(\n        sql,\n        params,\n        new RowMapper<Jeep>() {\n          @Override\n          public Jeep mapRow(ResultSet rs, int rowNum) throws SQLException {\n            return Jeep.builder()\n                .basePrice(new BigDecimal(rs.getString(\"base_price\")))\n                .modelId(JeepModel.valueOf(rs.getString(\"model_id\")))\n                .modelPK(rs.getLong(\"model_pk\"))\n                .numDoors(rs.getInt(\"num_doors\"))\n                .trimLevel(rs.getString(\"trim_level\"))\n                .wheelSize(rs.getInt(\"wheel_size\"))\n                .build();\n          }\n        });\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/jed/jeep/dao/DefaultJeepOrderDao.java b/src/main/java/com/jed/jeep/dao/DefaultJeepOrderDao.java
+--- a/src/main/java/com/jed/jeep/dao/DefaultJeepOrderDao.java	
++++ b/src/main/java/com/jed/jeep/dao/DefaultJeepOrderDao.java	
+@@ -1,52 +1,52 @@
+-package com.jed.jeep.dao;
+-
+-import com.jed.jeep.entity.Jeep;
+-import com.jed.jeep.entity.JeepModel;
+-import lombok.extern.slf4j.Slf4j;
+-import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.jdbc.core.RowMapper;
+-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+-import org.springframework.stereotype.Component;
+-
+-import javax.sql.DataSource;
+-import java.math.BigDecimal;
+-import java.sql.ResultSet;
+-import java.sql.SQLException;
+-import java.util.HashMap;
+-import java.util.List;
+-import java.util.Map;
+-
+-@Slf4j
+-@Component
+-public class DefaultJeepOrderDao implements JeepOrderDao {
+-
+-  @Autowired private NamedParameterJdbcTemplate jdbcTemplate;
+-
+-  @Override
+-  public List<Jeep> fetchJeeps(JeepModel model, String trim) {
+-    log.debug("DAO: model={}, trim={}", model, trim);
+-
+-    String sql = "SELECT * FROM models WHERE model_id = :model_id AND trim_level= :trim_level";
+-
+-    Map<String, Object> params = new HashMap<>();
+-    params.put("model_id", model.toString());
+-    params.put("trim_level", trim);
+-
+-    return jdbcTemplate.query(
+-        sql,
+-        params,
+-        new RowMapper<Jeep>() {
+-          @Override
+-          public Jeep mapRow(ResultSet rs, int rowNum) throws SQLException {
+-            return Jeep.builder()
+-                .basePrice(new BigDecimal(rs.getString("base_price")))
+-                .modelId(JeepModel.valueOf(rs.getString("model_id")))
+-                .modelPK(rs.getLong("model_pk"))
+-                .numDoors(rs.getInt("num_doors"))
+-                .trimLevel(rs.getString("trim_level"))
+-                .wheelSize(rs.getInt("wheel_size"))
+-                .build();
+-          }
+-        });
+-  }
+-}
++//package com.jed.jeep.dao;
++//
++//import com.jed.jeep.entity.Jeep;
++//import com.jed.jeep.entity.JeepModel;
++//import lombok.extern.slf4j.Slf4j;
++//import org.springframework.beans.factory.annotation.Autowired;
++//import org.springframework.jdbc.core.RowMapper;
++//import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
++//import org.springframework.stereotype.Component;
++//
++//import javax.sql.DataSource;
++//import java.math.BigDecimal;
++//import java.sql.ResultSet;
++//import java.sql.SQLException;
++//import java.util.HashMap;
++//import java.util.List;
++//import java.util.Map;
++//
++//@Slf4j
++//@Component
++//public class DefaultJeepOrderDao implements JeepOrderDao {
++//
++//  @Autowired private NamedParameterJdbcTemplate jdbcTemplate;
++//
++//  @Override
++//  public List<Jeep> fetchJeeps(JeepModel model, String trim) {
++//    log.debug("DAO: model={}, trim={}", model, trim);
++//
++//    String sql = "SELECT * FROM models WHERE model_id = :model_id AND trim_level= :trim_level";
++//
++//    Map<String, Object> params = new HashMap<>();
++//    params.put("model_id", model.toString());
++//    params.put("trim_level", trim);
++//
++//    return jdbcTemplate.query(
++//        sql,
++//        params,
++//        new RowMapper<Jeep>() {
++//          @Override
++//          public Jeep mapRow(ResultSet rs, int rowNum) throws SQLException {
++//            return Jeep.builder()
++//                .basePrice(new BigDecimal(rs.getString("base_price")))
++//                .modelId(JeepModel.valueOf(rs.getString("model_id")))
++//                .modelPK(rs.getLong("model_pk"))
++//                .numDoors(rs.getInt("num_doors"))
++//                .trimLevel(rs.getString("trim_level"))
++//                .wheelSize(rs.getInt("wheel_size"))
++//                .build();
++//          }
++//        });
++//  }
++//}
