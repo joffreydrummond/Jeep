@@ -2,6 +2,8 @@ package com.jed.jeep.dao;
 
 import com.jed.jeep.entity.Jeep;
 import com.jed.jeep.entity.JeepModel;
+import com.jed.jeep.entity.Order;
+import com.jed.jeep.entity.OrderRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
@@ -49,4 +51,10 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
           }
         });
   }
+
+    @Override
+    public Order createOrder(OrderRequest orderRequest) {
+      log.debug("Order={}", orderRequest);
+        return null;
+    }
 }
