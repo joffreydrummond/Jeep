@@ -8,6 +8,8 @@ import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
@@ -33,6 +35,8 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
       List<Option> options) {
 
     SqlParams params = generateInsertSql(customer, jeep, color, engine, tire, price);
+
+    KeyHolder keyHolder = new GeneratedKeyHolder();
 
     return null;
   }
