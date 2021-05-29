@@ -10,14 +10,14 @@ import javax.validation.constraints.*;
 public class OrderRequest {
   @NotNull
   @Length(max = 30)
-  @Pattern(regexp = "[A-Z_]*")
+  @Pattern(regexp = "[\\w\\s]*")
   private String customer;
 
   @NotNull private JeepModel model;
 
   @NotNull
   @Length(max = 30)
-  @Pattern(regexp = "[A-Z_]*")
+  @Pattern(regexp = "[\\w\\s]*")
   private String trim;
 
   @Positive
@@ -27,18 +27,18 @@ public class OrderRequest {
 
   @NotNull
   @Length(max = 30)
-  @Pattern(regexp = "[A-Z0-9_]*")
+  @Pattern(regexp = "[\\w\\s]*")
   private String color;
 
   @NotNull
   @Length(max = 30)
-  @Pattern(regexp = "[A-Z0-9_]*")
+  @Pattern(regexp = "[\\w\\s]*")
   private String engine;
 
   @NotNull
   @Length(max = 30)
-  @Pattern(regexp = "[A-Z0-9_]*")
+  @Pattern(regexp = "[\\w\\s]*")
   private String tire;
 
-  private List<@NotNull @Length(max = 30) @Pattern(regexp = "[A-Z0-9_]*") String> options;
+  private List<@NotNull @Length(max = 30) @Pattern(regexp = "[\\w\\s]*") String> options;
 }

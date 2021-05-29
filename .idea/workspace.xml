@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="added assertThat(res.getBody()).isNotNull();">
+    <list default="true" id="5f8f7a46-84fd-4ad8-81a4-9e9df06d5a97" name="Default Changelist" comment="added validation annotations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/JeepOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/JeepOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/BasicJeepOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/controller/BasicJeepOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/dao1/JeepOrderDao1.source" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/dao1/JeepOrderDao1.source" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/entity/OrderRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/CreateOrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jed/jeep/controller/CreateOrderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/service/DefaultJeepOrderService.source" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jed/jeep/service/DefaultJeepSalesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jed/jeep/service/DefaultJeepSalesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/dao/DefaultJeepOrderDao$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/dao/DefaultJeepOrderDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/dao/JeepOrderDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/entity/OrderRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jed/jeep/service/DefaultJeepSalesService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/CreateOrderTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/jed/jeep/controller/CreateOrderTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

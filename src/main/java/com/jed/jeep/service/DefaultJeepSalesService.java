@@ -1,5 +1,6 @@
 package com.jed.jeep.service;
 
+
 import com.jed.jeep.dao.JeepOrderDao;
 import com.jed.jeep.entity.Jeep;
 import com.jed.jeep.entity.JeepModel;
@@ -17,7 +18,10 @@ import java.util.NoSuchElementException;
 @Service
 @Slf4j
 public class DefaultJeepSalesService implements JeepSalesService {
-  @Autowired private JeepOrderDao jeepOrderDao;
+//  @Autowired private JeepOrderDao jeepOrderDao;
+
+  @Autowired
+  private JeepOrderDao jeepOrderDao;
 
   @Override @Transactional(readOnly = true)
   public List<Jeep> fetchJeeps(JeepModel model, String trim) {

@@ -2,13 +2,8 @@ package com.jed.jeep.dao1;
 
 import java.util.List;
 import java.util.Optional;
-import com.jed.jeep.entity.Color;
-import com.jed.jeep.entity.Customer;
-import com.jed.jeep.entity.Engine;
-import com.jed.jeep.entity.Jeep;
-import com.jed.jeep.entity.JeepModel;
-import com.jed.jeep.entity.Option;
-import com.jed.jeep.entity.Tire;
+
+import com.jed.jeep.entity.*;
 
 public interface JeepOrderDao1 {
   List<Option> fetchOptions(List<String> optionIds);
@@ -17,4 +12,8 @@ public interface JeepOrderDao1 {
   Optional<Color> fetchColor(String colorId);
   Optional<Engine> fetchEngine(String engineId);
   Optional<Tire> fetchTire(String tireId);
+
+  Order createOrder(OrderRequest orderRequest);
+
+  List<Jeep> fetchJeeps(JeepModel model, String trim);
 }
