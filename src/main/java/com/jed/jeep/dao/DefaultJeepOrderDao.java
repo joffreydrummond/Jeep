@@ -44,15 +44,21 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
 
     saveOptions(options, orderPk);
 
-    return null;
+    return Order.builder()
+        .orderPK(orderPk)
+        .customer(customer)
+        .model(jeep)
+        .color(color)
+        .engine(engine)
+        .tire(tire)
+        .price(price)
+        .build();
   }
 
   private void saveOptions(List<Option> options, Long orderPk) {
     for (Option option : options) {
       SqlParams params = generateInsertSql(option, orderPk);
-
     }
-
   }
 
   /**
