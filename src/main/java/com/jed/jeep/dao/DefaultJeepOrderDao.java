@@ -51,27 +51,33 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
         });
   }
 
-    @Override
-    public Customer fetchCustomer(String customer_id) {
-      String sql = "SELECT * FROM customers WHERE customer_id=:customer_id";
+  @Override
+  public Customer fetchCustomer(String customer_id) {
+    String sql = "SELECT * FROM customers WHERE customer_id=:customer_id";
 
-      Map<String, Object> params = new HashMap<>();
-      params.put("customer_id", customer_id);
+    Map<String, Object> params = new HashMap<>();
+    params.put("customer_id", customer_id);
 
-        return jdbcTemplate.query(sql, params, new CustomerResultSetExtractor());
+    return jdbcTemplate.query(sql, params, new CustomerResultSetExtractor());
+  }
+
+  static class CustomerResultSetExtractor implements ResultSetExtractor<Customer> {
+    public Customer extractData(ResultSet rs) throws SQLException, DataAccessException {
+      rs.next();
+
+      return Customer.builder()
+          .customerId(rs.getString("customer_id"))
+          .customerPK(rs.getLong("customer_pk"))
+          .firstName(rs.getString("first_name"))
+          .lastName(rs.getString("last_name"))
+          .phone(rs.getString("phone"))
+          .build();
     }
-static class CustomerResultSetExtractor implements ResultSetExtractor<Customer>{
-        public Customer extractData(ResultSet rs) throws SQLException, DataAccessException {
-            rs.next();
+  }
 
-      return Customer.builder().build();
-        }
-    }
-
-
-//    @Override
-//    public Order createOrder(OrderRequest orderRequest) {
-//      log.debug("Order={}", orderRequest);
-//        return null;
-//    }
+  //    @Override
+  //    public Order createOrder(OrderRequest orderRequest) {
+  //      log.debug("Order={}", orderRequest);
+  //        return null;
+  //    }
 }
