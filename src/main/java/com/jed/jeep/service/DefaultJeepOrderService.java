@@ -1,6 +1,7 @@
 package com.jed.jeep.service;
 
 import com.jed.jeep.dao.JeepOrderDao;
+import com.jed.jeep.entity.Customer;
 import com.jed.jeep.entity.Order;
 import com.jed.jeep.entity.OrderRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,9 @@ public class DefaultJeepOrderService implements JeepOrderService{
 
     @Override
     public Order createOrder(OrderRequest orderRequest) {
-        return jeepOrderDao.createOrder(orderRequest);
+        Customer customer = jeepOrderDao.fetchCustomer(orderRequest.getCustomer());
+
+
+        return null;
     }
 }

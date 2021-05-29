@@ -1,11 +1,10 @@
 package com.jed.jeep.dao;
 
-import com.jed.jeep.entity.Jeep;
-import com.jed.jeep.entity.JeepModel;
-import com.jed.jeep.entity.Order;
-import com.jed.jeep.entity.OrderRequest;
+import com.jed.jeep.entity.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
@@ -53,8 +52,26 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
   }
 
     @Override
-    public Order createOrder(OrderRequest orderRequest) {
-      log.debug("Order={}", orderRequest);
-        return null;
+    public Customer fetchCustomer(String customer_id) {
+      String sql = "SELECT * FROM customers WHERE customer_id=:customer_id";
+
+      Map<String, Object> params = new HashMap<>();
+      params.put("customer_id", customer_id);
+
+        return jdbcTemplate.query(sql, params, new CustomerResultSetExtractor());
     }
+static class CustomerResultSetExtractor implements ResultSetExtractor<Customer>{
+        public Customer extractData(ResultSet rs) throws SQLException, DataAccessException {
+            rs.next();
+
+      return Customer.builder().build();
+        }
+    }
+
+
+//    @Override
+//    public Order createOrder(OrderRequest orderRequest) {
+//      log.debug("Order={}", orderRequest);
+//        return null;
+//    }
 }
