@@ -38,7 +38,21 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
 
     KeyHolder keyHolder = new GeneratedKeyHolder();
 
+    jdbcTemplate.update(params.sql, params.source, keyHolder);
+
+    Long orderPk = Objects.requireNonNull(keyHolder.getKey()).longValue();
+
+    saveOptions(options, orderPk);
+
     return null;
+  }
+
+  private void saveOptions(List<Option> options, Long orderPk) {
+    for (Option option : options) {
+      SqlParams params = generateInsertSql(option, orderPk);
+
+    }
+
   }
 
   /**
