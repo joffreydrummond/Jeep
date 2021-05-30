@@ -51,9 +51,11 @@ class CreateOrderTest extends CreateOrderTestSupport {
     assertThat(order.getModel().getModelId()).isEqualTo(JeepModel.WRANGLER);
     assertThat(order.getModel().getTrimLevel()).isEqualTo("Sport Altitude");
     assertThat(order.getModel().getNumDoors()).isEqualTo(4);
+    assertThat(order.getColor().getColorId()).isEqualTo("EXT_NACHO");
     assertThat(order.getEngine().getEngineId()).isEqualTo("2_0_TURBO");
     assertThat(order.getTire().getTireId()).isEqualTo("35_TOYO");
     assertThat(order.getOptions()).hasSize(6);
+
 
 
   }

@@ -2,6 +2,7 @@ package com.jed.jeep.service;
 
 import com.jed.jeep.dao.JeepOrderDao;
 import com.jed.jeep.entity.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,8 +13,11 @@ import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class DefaultJeepOrderService implements JeepOrderService {
   @Autowired private JeepOrderDao jeepOrderDao;
+
+
 
   /**
    * @param orderRequest
@@ -96,6 +100,7 @@ public class DefaultJeepOrderService implements JeepOrderService {
   @Transactional
   @Override
   public Order createOrder(OrderRequest orderRequest) {
+    log.info("I am in createOrder() in the service");
     Customer customer = getCustomer(orderRequest);
     Jeep jeep = getModel(orderRequest);
     Color color = getColor(orderRequest);
@@ -113,13 +118,4 @@ public class DefaultJeepOrderService implements JeepOrderService {
 
     return jeepOrderDao.saveOrder(customer, jeep, color, engine, tire, price, options);
   }
-
-  //    @Override
-  //    public Order createOrder(OrderRequest orderRequest) {
-  //        Customer customer = jeepOrderDao.fetchCustomer(orderRequest.getCustomer());
-  //
-  ////        Jeep jeep = jeepOrderDao.fetchModel
-  //
-  //        return null;
-  //    }
 }

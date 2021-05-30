@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController @Slf4j
-public class BasicJeepOrderController implements JeepOrderController{
+public class DefaultJeepOrderController implements JeepOrderController{
 
     @Autowired
     private JeepOrderService jeepOrderService;
@@ -17,6 +17,7 @@ public class BasicJeepOrderController implements JeepOrderController{
     @Override
     public Order createOrder(OrderRequest orderRequest) {
         log.debug("Order={}", orderRequest);
+        log.debug("I am in createOrder() controller");
         return  jeepOrderService.createOrder(orderRequest);
     }
 }

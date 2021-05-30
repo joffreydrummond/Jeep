@@ -28,8 +28,6 @@ import java.util.List;
     info = @Info(title = "Joffrey Jeep Order Service"),
     servers = {@Server(url = "http://localhost:8080", description = "Local server.")})
 public interface JeepOrderController {
-    public static final int TRIM_MAX_LENGTH = 30;
-
         // @formatter:off
   @Operation(
       summary = "Create an order for a Jeep",

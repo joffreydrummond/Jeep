@@ -40,7 +40,7 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
 
     jdbcTemplate.update(params.sql, params.source, keyHolder);
 
-    Long orderPk = Objects.requireNonNull(keyHolder.getKey()).longValue();
+    Long orderPk = keyHolder.getKey().longValue();
 
     saveOptions(options, orderPk);
 
@@ -51,6 +51,7 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
         .color(color)
         .engine(engine)
         .tire(tire)
+        .options(options)
         .price(price)
         .build();
   }
@@ -58,6 +59,7 @@ public class DefaultJeepOrderDao implements JeepOrderDao {
   private void saveOptions(List<Option> options, Long orderPk) {
     for (Option option : options) {
       SqlParams params = generateInsertSql(option, orderPk);
+      jdbcTemplate.update(params.sql, params.source);
     }
   }
 
